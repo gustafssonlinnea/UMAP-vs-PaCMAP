@@ -1,5 +1,5 @@
 # UMAP vs PaCMAP
-![Dimensionality reduction scatter plots using UMAP and PaCMAP](figures/fig.png)
+![Dimensionality reduction scatter plots using UMAP and PaCMAP](figures/fig__README.png)
 
 This is a dimensionality reduction project in the course *DD2470 Advanced Topics in Visualization and Computer Graphics* at KTH Royal Institute of Technology, Stockholm (2024), made by Linnéa Gustafsson.
 

@@ -5,7 +5,7 @@ import seaborn as sns
 from mpl_toolkits.mplot3d import Axes3D  # 3D plotting toolkit
 
 
-class PaCMAP:
+class PaCMAP_reducer:
     def __init__(self, n_components=2, n_neighbors=None, MN_ratio=0.5, FP_ratio=2.0):
         """
         n_neighbors=None leads to default choice:

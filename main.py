@@ -1,9 +1,18 @@
+import sys
+import numpy as np
+from PARAMETERS import*
+
+# Insert module paths
+module_paths = ['algorithms', 'evaluation', 'visualization']  # './path' if main is in a folder
+sys.path[0:0] = module_paths
+
+# Import packages
 from sklearn import datasets
-# from sklearn.datasets import fetch_openml
-from UMAP import UMAP
-from PaCMAP import PaCMAP
+from umap_reducer import UMAP_reducer
+from pacmap_reducer import PaCMAP_reducer
 import evaluation
 import visualization
+from PARAMETERS import RANDOM_SEED
 
 
 def get_dataset_by_name(name='Digits'):
@@ -52,41 +61,157 @@ def get_dataset_by_name(name='Digits'):
     return X, y
 
 
-def main(dataset_name, figure_path='figures', figure_name='fig'):
-    # Load data
-    X, y = get_dataset_by_name(dataset_name)
+def get_best_result_and_corresponding_parameters(
+    Xs,
+    results, 
+    params,
+    knn_neighbors=[1, 3, 5, 10, 15, 20, 25, 30]):
+    print('\nCalculating best results')
+    best_Xs = {}
+    best_result = {}
+    best_result['knn'] = float('-inf')
+    best_result['svm'] = float('-inf')
+    best_result['cte'] = float('-inf')
+    best_result['rte'] = float('-inf')
+    
+    best_param = {}
+    best_knn_neighbors = None
+    
+    for i, result in enumerate(results):
+        knns = result['knn']
+        svm = result['svm']
+        cte = result['cte']
+        rte = result['rte']
+        
+        for j, knn in enumerate(knns):
+            if knn > best_result['knn']:
+                best_Xs['knn'] = Xs[i]
+                best_result['knn'] = knn
+                best_param['knn'] = params[i]
+                best_knn_neighbors = knn_neighbors[j]
+        
+        if svm > best_result['svm']:
+            best_Xs['svm'] = Xs[i]
+            best_result['svm'] = svm
+            best_param['svm'] = params[i]
+            
+        if cte > best_result['cte']:
+            best_Xs['cte'] = Xs[i]
+            best_result['cte'] = cte
+            best_param['cte'] = params[i]
+        
+        if rte > best_result['rte']:
+            best_Xs['rte'] = Xs[i]
+            best_result['rte'] = rte
+            best_param['rte'] = params[i]
+    
+    print('Best results calculated\n')
+    return best_Xs, best_result, best_param, best_knn_neighbors
+
+
+def hyperparameter_tuning(X, 
+                          y, 
+                          algorithm='UMAP', 
+                          ns_neighbors=[5, 10, 20, 50, 100]):
+    print(f'\nHyperparameter tuning for {algorithm}:\n')
+    Xs_new = []
+    results = []
+
+    if algorithm == 'UMAP':
+        for n_neighbors in ns_neighbors:
+            print(f'Calculating results for {n_neighbors} neighbors')
+            umap = UMAP_reducer(n_neighbors=n_neighbors)
+            umap.fit(X) 
+            X_new_umap = umap.get_embedding()
+            result_umap = evaluation.evaluate_output(X, X_new_umap, y, 'UMAP')
+            Xs_new.append(X_new_umap)
+            results.append(result_umap)
+
+    elif algorithm == 'PaCMAP':
+        for n_neighbors in ns_neighbors:
+            print(f'Calculating results for {n_neighbors} neighbors')
+            pacmap = PaCMAP_reducer(n_neighbors=n_neighbors)
+            pacmap.fit(X) 
+            X_new_pacmap = pacmap.get_embedding()
+            result_pacmap = evaluation.evaluate_output(X, X_new_pacmap, y, 'PaCMAP')
+            Xs_new.append(X_new_pacmap)
+            results.append(result_pacmap)
+    else:
+        print('Not a valid algorithm for hyperparameter tuning (can only be "UMAP" or "PaCMAP")')
+
+    best_Xs, best_result, best_param, best_knn_neighbors = get_best_result_and_corresponding_parameters(
+        Xs_new, 
+        results, 
+        ns_neighbors)
+    
+    best_result['name'] = algorithm
+    print(f'Done with hyperparameter tuning for {algorithm}\n')
+    
+    return best_Xs, best_result, best_param, best_knn_neighbors
+
+
+def visualize_and_print_results(Xs_new_umap,
+                                Xs_new_pacmap,
+                                knn_neighbors_umap,
+                                knn_neighbors_pacmap,
+                                results_umap,
+                                results_pacmap,
+                                params_umap,
+                                params_pacmap,
+                                y,
+                                dataset_name):
+    # Print results of both algorithms
+    evaluation.print_evaluation_results(results_umap)
+    evaluation.print_evaluation_results(results_pacmap)
+
+    print('knn_neighbors_umap:', knn_neighbors_umap)
+    print('knn_neighbors_pacmap:', knn_neighbors_pacmap)
+    
+    print('params_umap', params_umap)
+    print('params_pacmap', params_pacmap)
+    
+    metrics = ['knn', 'svm', 'cte', 'rte']
+    title_metrics = ['KNN', 'SVM', 'centroid triplet', 'random triplet']
+    
+    # Plot all visualizations
+    for metric, title_metric in zip(metrics, title_metrics):
+        visualization.plot_embeddings(embeddings=[{'UMAP': Xs_new_umap[metric]},
+                                                  {'PaCMAP': Xs_new_pacmap[metric]}],
+                                    y=y, 
+                                    data_title=dataset_name,
+                                    fig_name=f'fig_{dataset_name}_{metric}',
+                                    n_neighbors=[params_umap[metric],
+                                                params_pacmap[metric]],
+                                    #n_knn_neighbors=[knn_neighbors_umap, knn_neighbors_pacmap],
+                                    metric=title_metric)
+
+
+def main(dataset_name, data_path='data', figure_path='figures'):
+    print('\nInitializing UMAP and PaCMAP calculations\n')
+    np.random.seed(RANDOM_SEED)  # Set random seed
+    X, y = get_dataset_by_name(dataset_name)  # Load data
     
     # UMAP
-    umap = UMAP()
-    umap.fit(X) 
-    #umap.plot_embedding(y, dataset_name)
-    X_new_umap = umap.get_embedding()
-    results_umap = evaluation.evaluate_output(X, X_new_umap, y, 'UMAP')
-    evaluation.print_evaluation_results(results_umap)
-    # visualization.plot_embedding(X_new_umap, y, 'UMAP', dataset_name)
-    #visualization.plot_embeddings(y, dataset_name, {'UMAP': X_new_umap})
+    Xs_new_umap, results_umap, params_umap, knn_neighbors_umap = hyperparameter_tuning(X, y, algorithm='UMAP')
+    X_new_umap = Xs_new_umap['knn']
     
     # PaCMAP
-    pacmap = PaCMAP()
-    pacmap.fit(X)
-    #pacmap.plot_embedding(y, dataset_name)
-    X_new_pacmap = pacmap.get_embedding()
-    results_pacmap = evaluation.evaluate_output(X, X_new_pacmap, y, 'PaCMAP')
-    evaluation.print_evaluation_results(results_pacmap)
-    #visualization.plot_embedding(X_new_pacmap, y, 'PaCMAP', dataset_name)
+    Xs_new_pacmap, results_pacmap, params_pacmap, knn_neighbors_pacmap = hyperparameter_tuning(X, y, algorithm='PaCMAP')
     
-    # Plot embeddings    
-    visualization.plot_embeddings(y, 
-                                  dataset_name,
-                                  100,
-                                  0.3,
-                                  figure_path,
-                                  figure_name,
-                                  {'UMAP': X_new_umap}, {'PaCMAP': X_new_pacmap})
+    visualize_and_print_results(Xs_new_umap,
+                                Xs_new_pacmap,
+                                knn_neighbors_umap,
+                                knn_neighbors_pacmap,
+                                results_umap,
+                                results_pacmap,
+                                params_umap,
+                                params_pacmap,
+                                y,
+                                dataset_name)
+    
     
 if __name__ == '__main__':
     main('Digits')  # Choose the dataset you want to use
-    
     
     #data_path = "./data/"
     #output_path = "./output/"

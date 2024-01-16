@@ -1,4 +1,4 @@
-"""Most code from the official PaCMAP implementation"""
+"""Most code from the official PaCMAP implementation (January 2024)"""
 
 import os
 import json
@@ -8,7 +8,7 @@ import numpy as np
 import pickle
 import numba
 
-from run_script import data_prep
+from utils.run_script import data_prep
 from sklearn.svm import SVC, LinearSVC
 from sklearn.model_selection import StratifiedKFold, LeaveOneOut
 from sklearn.neighbors import KNeighborsClassifier, NearestNeighbors
@@ -23,6 +23,10 @@ from numpy.random import default_rng
 import numpy as np
 import numba
 from sklearn.decomposition import TruncatedSVD
+
+from PARAMETERS import*
+
+np.random.seed(RANDOM_SEED)  # Set random seed
 
 
 @numba.njit()
@@ -619,7 +623,10 @@ def print_evaluation_results(results):
         results (_type_): _description_
     """
     print(f"\nThe results of {results['name']}:")
-    print(f"KNN accuracies (for different n_neighbors):\t{results['knn']}")
+    if results['knn'] is list:
+        print(f"KNN accuracies (for different n_neighbors):\t{results['knn']}")
+    else:
+        print(f"KNN accuracy:\t{results['knn']}")
     print(f"SVM accuracy:\t{results['svm']}")
     print(f"Centroid triplet accuracy:\t{results['cte']}")
     print(f"Random triplet accuracy:\t{results['rte']}\n")

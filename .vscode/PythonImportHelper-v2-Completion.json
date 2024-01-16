@@ -1,0 +1,760 @@
+[
+    {
+        "label": "pacmap",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pacmap",
+        "description": "pacmap",
+        "detail": "pacmap",
+        "documentation": {}
+    },
+    {
+        "label": "matplotlib.pyplot",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "matplotlib.pyplot",
+        "description": "matplotlib.pyplot",
+        "detail": "matplotlib.pyplot",
+        "documentation": {}
+    },
+    {
+        "label": "numpy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "numpy",
+        "description": "numpy",
+        "detail": "numpy",
+        "documentation": {}
+    },
+    {
+        "label": "seaborn",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "seaborn",
+        "description": "seaborn",
+        "detail": "seaborn",
+        "documentation": {}
+    },
+    {
+        "label": "Axes3D",
+        "importPath": "mpl_toolkits.mplot3d",
+        "description": "mpl_toolkits.mplot3d",
+        "isExtraImport": true,
+        "detail": "mpl_toolkits.mplot3d",
+        "documentation": {}
+    },
+    {
+        "label": "Axes3D",
+        "importPath": "mpl_toolkits.mplot3d",
+        "description": "mpl_toolkits.mplot3d",
+        "isExtraImport": true,
+        "detail": "mpl_toolkits.mplot3d",
+        "documentation": {}
+    },
+    {
+        "label": "UMAP",
+        "importPath": "umap.umap_",
+        "description": "umap.umap_",
+        "isExtraImport": true,
+        "detail": "umap.umap_",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "matplotlib.cm",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "matplotlib.cm",
+        "description": "matplotlib.cm",
+        "detail": "matplotlib.cm",
+        "documentation": {}
+    },
+    {
+        "label": "pickle",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pickle",
+        "description": "pickle",
+        "detail": "pickle",
+        "documentation": {}
+    },
+    {
+        "label": "numba",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "numba",
+        "description": "numba",
+        "detail": "numba",
+        "documentation": {}
+    },
+    {
+        "label": "data_prep",
+        "importPath": "utils.run_script",
+        "description": "utils.run_script",
+        "isExtraImport": true,
+        "detail": "utils.run_script",
+        "documentation": {}
+    },
+    {
+        "label": "SVC",
+        "importPath": "sklearn.svm",
+        "description": "sklearn.svm",
+        "isExtraImport": true,
+        "detail": "sklearn.svm",
+        "documentation": {}
+    },
+    {
+        "label": "LinearSVC",
+        "importPath": "sklearn.svm",
+        "description": "sklearn.svm",
+        "isExtraImport": true,
+        "detail": "sklearn.svm",
+        "documentation": {}
+    },
+    {
+        "label": "SVC",
+        "importPath": "sklearn.svm",
+        "description": "sklearn.svm",
+        "isExtraImport": true,
+        "detail": "sklearn.svm",
+        "documentation": {}
+    },
+    {
+        "label": "StratifiedKFold",
+        "importPath": "sklearn.model_selection",
+        "description": "sklearn.model_selection",
+        "isExtraImport": true,
+        "detail": "sklearn.model_selection",
+        "documentation": {}
+    },
+    {
+        "label": "LeaveOneOut",
+        "importPath": "sklearn.model_selection",
+        "description": "sklearn.model_selection",
+        "isExtraImport": true,
+        "detail": "sklearn.model_selection",
+        "documentation": {}
+    },
+    {
+        "label": "LeaveOneOut",
+        "importPath": "sklearn.model_selection",
+        "description": "sklearn.model_selection",
+        "isExtraImport": true,
+        "detail": "sklearn.model_selection",
+        "documentation": {}
+    },
+    {
+        "label": "StratifiedKFold",
+        "importPath": "sklearn.model_selection",
+        "description": "sklearn.model_selection",
+        "isExtraImport": true,
+        "detail": "sklearn.model_selection",
+        "documentation": {}
+    },
+    {
+        "label": "train_test_split",
+        "importPath": "sklearn.model_selection",
+        "description": "sklearn.model_selection",
+        "isExtraImport": true,
+        "detail": "sklearn.model_selection",
+        "documentation": {}
+    },
+    {
+        "label": "KNeighborsClassifier",
+        "importPath": "sklearn.neighbors",
+        "description": "sklearn.neighbors",
+        "isExtraImport": true,
+        "detail": "sklearn.neighbors",
+        "documentation": {}
+    },
+    {
+        "label": "NearestNeighbors",
+        "importPath": "sklearn.neighbors",
+        "description": "sklearn.neighbors",
+        "isExtraImport": true,
+        "detail": "sklearn.neighbors",
+        "documentation": {}
+    },
+    {
+        "label": "KNeighborsClassifier",
+        "importPath": "sklearn.neighbors",
+        "description": "sklearn.neighbors",
+        "isExtraImport": true,
+        "detail": "sklearn.neighbors",
+        "documentation": {}
+    },
+    {
+        "label": "euclidean_distances",
+        "importPath": "sklearn.metrics.pairwise",
+        "description": "sklearn.metrics.pairwise",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics.pairwise",
+        "documentation": {}
+    },
+    {
+        "label": "scale",
+        "importPath": "sklearn.preprocessing",
+        "description": "sklearn.preprocessing",
+        "isExtraImport": true,
+        "detail": "sklearn.preprocessing",
+        "documentation": {}
+    },
+    {
+        "label": "PCA",
+        "importPath": "sklearn.decomposition",
+        "description": "sklearn.decomposition",
+        "isExtraImport": true,
+        "detail": "sklearn.decomposition",
+        "documentation": {}
+    },
+    {
+        "label": "TruncatedSVD",
+        "importPath": "sklearn.decomposition",
+        "description": "sklearn.decomposition",
+        "isExtraImport": true,
+        "detail": "sklearn.decomposition",
+        "documentation": {}
+    },
+    {
+        "label": "Nystroem",
+        "importPath": "sklearn.kernel_approximation",
+        "description": "sklearn.kernel_approximation",
+        "isExtraImport": true,
+        "detail": "sklearn.kernel_approximation",
+        "documentation": {}
+    },
+    {
+        "label": "Nystroem",
+        "importPath": "sklearn.kernel_approximation",
+        "description": "sklearn.kernel_approximation",
+        "isExtraImport": true,
+        "detail": "sklearn.kernel_approximation",
+        "documentation": {}
+    },
+    {
+        "label": "make_pipeline",
+        "importPath": "sklearn.pipeline",
+        "description": "sklearn.pipeline",
+        "isExtraImport": true,
+        "detail": "sklearn.pipeline",
+        "documentation": {}
+    },
+    {
+        "label": "Counter",
+        "importPath": "collections",
+        "description": "collections",
+        "isExtraImport": true,
+        "detail": "collections",
+        "documentation": {}
+    },
+    {
+        "label": "default_rng",
+        "importPath": "numpy.random",
+        "description": "numpy.random",
+        "isExtraImport": true,
+        "detail": "numpy.random",
+        "documentation": {}
+    },
+    {
+        "label": "load_digits",
+        "importPath": "sklearn.datasets",
+        "description": "sklearn.datasets",
+        "isExtraImport": true,
+        "detail": "sklearn.datasets",
+        "documentation": {}
+    },
+    {
+        "label": "umap",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "umap",
+        "description": "umap",
+        "detail": "umap",
+        "documentation": {}
+    },
+    {
+        "label": "accuracy_score",
+        "importPath": "sklearn.metrics",
+        "description": "sklearn.metrics",
+        "isExtraImport": true,
+        "detail": "sklearn.metrics",
+        "documentation": {}
+    },
+    {
+        "label": "pdist",
+        "importPath": "scipy.spatial.distance",
+        "description": "scipy.spatial.distance",
+        "isExtraImport": true,
+        "detail": "scipy.spatial.distance",
+        "documentation": {}
+    },
+    {
+        "label": "tabulate",
+        "importPath": "tabulate",
+        "description": "tabulate",
+        "isExtraImport": true,
+        "detail": "tabulate",
+        "documentation": {}
+    },
+    {
+        "label": "evaluation",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "evaluation",
+        "description": "evaluation",
+        "detail": "evaluation",
+        "documentation": {}
+    },
+    {
+        "label": "calculate_svm_accuracy",
+        "importPath": "evaluation",
+        "description": "evaluation",
+        "isExtraImport": true,
+        "detail": "evaluation",
+        "documentation": {}
+    },
+    {
+        "label": "pandas",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pandas",
+        "description": "pandas",
+        "detail": "pandas",
+        "documentation": {}
+    },
+    {
+        "label": "ListedColormap",
+        "importPath": "matplotlib.colors",
+        "description": "matplotlib.colors",
+        "isExtraImport": true,
+        "detail": "matplotlib.colors",
+        "documentation": {}
+    },
+    {
+        "label": "matplotlib",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "matplotlib",
+        "description": "matplotlib",
+        "detail": "matplotlib",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "datasets",
+        "importPath": "sklearn",
+        "description": "sklearn",
+        "isExtraImport": true,
+        "detail": "sklearn",
+        "documentation": {}
+    },
+    {
+        "label": "UMAP_reducer",
+        "importPath": "umap_reducer",
+        "description": "umap_reducer",
+        "isExtraImport": true,
+        "detail": "umap_reducer",
+        "documentation": {}
+    },
+    {
+        "label": "PaCMAP_reducer",
+        "importPath": "pacmap_reducer",
+        "description": "pacmap_reducer",
+        "isExtraImport": true,
+        "detail": "pacmap_reducer",
+        "documentation": {}
+    },
+    {
+        "label": "visualization",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "visualization",
+        "description": "visualization",
+        "detail": "visualization",
+        "documentation": {}
+    },
+    {
+        "label": "RANDOM_SEED",
+        "importPath": "PARAMETERS",
+        "description": "PARAMETERS",
+        "isExtraImport": true,
+        "detail": "PARAMETERS",
+        "documentation": {}
+    },
+    {
+        "label": "PaCMAP_reducer",
+        "kind": 6,
+        "importPath": "algorithms.pacmap_reducer",
+        "description": "algorithms.pacmap_reducer",
+        "peekOfCode": "class PaCMAP_reducer:\n    def __init__(self, n_components=2, n_neighbors=None, MN_ratio=0.5, FP_ratio=2.0):\n        \"\"\"\n        n_neighbors=None leads to default choice:\n        - For dataset whose sample size < 10000: 10\n        - For dataset whose sample size n > 10000: 10 + 15 * (log10(n) - 4)\n        \"\"\"\n        self.reducer = pacmap.PaCMAP(n_components=n_components, n_neighbors=n_neighbors, MN_ratio=MN_ratio, FP_ratio=FP_ratio)  \n    def fit(self, X):\n        # X_transformed = embedding.fit_transform(X, init='pca')",
+        "detail": "algorithms.pacmap_reducer",
+        "documentation": {}
+    },
+    {
+        "label": "UMAP_reducer",
+        "kind": 6,
+        "importPath": "algorithms.umap_reducer",
+        "description": "algorithms.umap_reducer",
+        "peekOfCode": "class UMAP_reducer:\n    def __init__(self, min_dist=0.1, n_components=2, n_epochs=500, n_neighbors=1000):\n        self.reducer = UMAP(min_dist=min_dist, n_components=n_components, n_epochs=n_epochs, n_neighbors=n_neighbors)       \n    def fit(self, X):\n        self.reducer.fit(X)\n    def get_embedding(self):\n        return self.reducer.embedding_\n    def plot_embedding(self, y, data_title):\n        assert hasattr(self.reducer, 'embedding_'), \"UMAP reducer not fitted to data. Call the 'fit' method first.\"\n        sns.set(style='white', context='notebook', rc={'figure.figsize':(14,10)})",
+        "detail": "algorithms.umap_reducer",
+        "documentation": {}
+    },
+    {
+        "label": "euclid_dist",
+        "kind": 2,
+        "importPath": "evaluation.evaluation",
+        "description": "evaluation.evaluation",
+        "peekOfCode": "def euclid_dist(x1, x2):\n    result = 0.0\n    for i in range(x1.shape[0]):\n        result += (x1[i] - x2[i]) ** 2\n    return np.sqrt(result)\ndef score(X, Y, i,j,k):\n    yij = euclid_dist(Y[i], Y[j])\n    yik = euclid_dist(Y[i], Y[k])\n    if yik < yij:\n        return 1",
+        "detail": "evaluation.evaluation",
+        "documentation": {}
+    },
+    {
+        "label": "score",
+        "kind": 2,
+        "importPath": "evaluation.evaluation",
+        "description": "evaluation.evaluation",
+        "peekOfCode": "def score(X, Y, i,j,k):\n    yij = euclid_dist(Y[i], Y[j])\n    yik = euclid_dist(Y[i], Y[k])\n    if yik < yij:\n        return 1\n    else:\n        return 0\ndef score_largely(X, Y, i,j,k):\n    xij = euclid_dist(X[i], X[j])\n    xik = euclid_dist(X[i], X[k])",
+        "detail": "evaluation.evaluation",
+        "documentation": {}
+    },
+    {
+        "label": "score_largely",
+        "kind": 2,
+        "importPath": "evaluation.evaluation",
+        "description": "evaluation.evaluation",
+        "peekOfCode": "def score_largely(X, Y, i,j,k):\n    xij = euclid_dist(X[i], X[j])\n    xik = euclid_dist(X[i], X[k])\n    yij = euclid_dist(Y[i], Y[j])\n    yik = euclid_dist(Y[i], Y[k])\n    if (xik-xij)/(xik+1e-15) < 0.2: # when the triplet is less important in high-dim space\n        if (yij-yik)/(yik+1e-15) < 0.2: # no violation or slight violation\n            return 0\n        else:\n            return 1",
+        "detail": "evaluation.evaluation",
+        "documentation": {}
+    },
+    {
+        "label": "eval_random",
+        "kind": 2,
+        "importPath": "evaluation.evaluation",
+        "description": "evaluation.evaluation",
+        "peekOfCode": "def eval_random(X, Y, num=20):\n    n, x_dim = X.shape\n    if x_dim > 100:\n        X -= np.mean(X, axis=0)\n        X = TruncatedSVD(n_components=100, random_state=0).fit_transform(X)\n    res = 0\n    for i in range(n):\n        for j in range(num):\n            selected = np.random.randint(0, n, 2)\n            if euclid_dist(X[i], X[selected[0]]) < euclid_dist(X[i], X[selected[1]]):",
+        "detail": "evaluation.evaluation",
+        "documentation": {}
+    },
+    {
+        "label": "knn_clf",
+        "kind": 2,
+        "importPath": "evaluation.evaluation",
+        "description": "evaluation.evaluation",
+        "peekOfCode": "def knn_clf(nbr_vec, y):\n    '''\n    Helper function to generate knn classification result.\n    '''\n    y_vec = y[nbr_vec]\n    c = Counter(y_vec)\n    return c.most_common(1)[0][0]\ndef knn_eval(X, y, n_neighbors=1):\n    '''\n    This is a function that is used to evaluate the lower dimension embedding.",
+        "detail": "evaluation.evaluation",
+        "documentation": {}
+    },
+    {
+        "label": "knn_eval",
+        "kind": 2,
+        "importPath": "evaluation.evaluation",
+        "description": "evaluation.evaluation",
+        "peekOfCode": "def knn_eval(X, y, n_neighbors=1):\n    '''\n    This is a function that is used to evaluate the lower dimension embedding.\n    An accuracy is calculated by an k-nearest neighbor classifier.\n    Input:\n        X: A numpy array with the shape [N, k]. The lower dimension embedding\n           of some dataset. Expected to have some clusters.\n        y: A numpy array with the shape [N, 1]. The labels of the original\n           dataset.\n        kwargs: Any keyword argument that is send into the knn clf.",
+        "detail": "evaluation.evaluation",
+        "documentation": {}
+    },
+    {
+        "label": "knn_eval_series",
+        "kind": 2,
+        "importPath": "evaluation.evaluation",
+        "description": "evaluation.evaluation",
+        "peekOfCode": "def knn_eval_series(X, y, n_neighbors_list=[1, 3, 5, 10, 15, 20, 25, 30]):\n    '''\n    This is a function that is used to evaluate the lower dimension embedding.\n    An accuracy is calculated by an k-nearest neighbor classifier.\n    A series of accuracy will be calculated for the given n_neighbors.\n    Input:\n        X: A numpy array with the shape [N, k]. The lower dimension embedding\n           of some dataset. Expected to have some clusters.\n        y: A numpy array with the shape [N, 1]. The labels of the original\n           dataset.",
+        "detail": "evaluation.evaluation",
+        "documentation": {}
+    },
+    {
+        "label": "faster_knn_eval_series",
+        "kind": 2,
+        "importPath": "evaluation.evaluation",
+        "description": "evaluation.evaluation",
+        "peekOfCode": "def faster_knn_eval_series(X, y, n_neighbors_list=[1, 3, 5, 10, 15, 20, 25, 30]):\n    '''\n    This is a function that is used to evaluate the lower dimension embedding.\n    An accuracy is calculated by an k-nearest neighbor classifier.\n    A series of accuracy will be calculated for the given n_neighbors.\n    Input:\n        X: A numpy array with the shape [N, k]. The lower dimension embedding\n           of some dataset. Expected to have some clusters.\n        y: A numpy array with the shape [N, 1]. The labels of the original\n           dataset.",
+        "detail": "evaluation.evaluation",
+        "documentation": {}
+    },
+    {
+        "label": "svm_eval",
+        "kind": 2,
+        "importPath": "evaluation.evaluation",
+        "description": "evaluation.evaluation",
+        "peekOfCode": "def svm_eval(X, y, img_verbose=False, n_splits=5, **kwargs):\n    '''\n    This is a function that is used to evaluate the lower dimension embedding.\n    An accuracy is calculated by an SVM with rbf kernel.\n    Input:\n        X: A numpy array with the shape [N, k]. The lower dimension embedding\n           of some dataset. Expected to have some clusters.\n        y: A numpy array with the shape [N, 1]. The labels of the original\n           dataset.\n        kwargs: Any keyword argument that is send into the SVM.",
+        "detail": "evaluation.evaluation",
+        "documentation": {}
+    },
+    {
+        "label": "faster_svm_eval",
+        "kind": 2,
+        "importPath": "evaluation.evaluation",
+        "description": "evaluation.evaluation",
+        "peekOfCode": "def faster_svm_eval(X, y, n_splits=5, **kwargs):\n    '''\n    This is an accelerated version of the svm_eval function.\n    An accuracy is calculated by an SVM with rbf kernel.\n    Input:\n        X: A numpy array with the shape [N, k]. The lower dimension embedding\n           of some dataset. Expected to have some clusters.\n        y: A numpy array with the shape [N, 1]. The labels of the original\n           dataset.\n        kwargs: Any keyword argument that is send into the SVM.",
+        "detail": "evaluation.evaluation",
+        "documentation": {}
+    },
+    {
+        "label": "centroid_triplet_eval",
+        "kind": 2,
+        "importPath": "evaluation.evaluation",
+        "description": "evaluation.evaluation",
+        "peekOfCode": "def centroid_triplet_eval(X, X_new, y):\n    '''\n    This is a function that is used to evaluate the lower dimension embedding.\n    An triplet satisfaction score is calculated by evaluating how many triplets\n    of cluster centroids have been violated.\n    Input:\n        X: A numpy array with the shape [N, p]. The higher dimension embedding\n           of some dataset. Expected to have some clusters.\n        X_new: A numpy array with the shape [N, k]. The lower dimension embedding\n               of some dataset. Expected to have some clusters as well.",
+        "detail": "evaluation.evaluation",
+        "documentation": {}
+    },
+    {
+        "label": "faster_centroid_triplet_eval",
+        "kind": 2,
+        "importPath": "evaluation.evaluation",
+        "description": "evaluation.evaluation",
+        "peekOfCode": "def faster_centroid_triplet_eval(X, X_new, y):\n    '''\n    This is a function that is used to evaluate the lower dimension embedding.\n    An triplet satisfaction score is calculated by evaluating how many triplets\n    of cluster median centroids have been violated.\n    Input:\n        X: A numpy array with the shape [N, p]. The higher dimension embedding\n           of some dataset. Expected to have some clusters.\n        X_new: A numpy array with the shape [N, k]. The lower dimension embedding\n               of some dataset. Expected to have some clusters as well.",
+        "detail": "evaluation.evaluation",
+        "documentation": {}
+    },
+    {
+        "label": "random_triplet_eval",
+        "kind": 2,
+        "importPath": "evaluation.evaluation",
+        "description": "evaluation.evaluation",
+        "peekOfCode": "def random_triplet_eval(X, X_new, y):\n    '''\n    This is a function that is used to evaluate the lower dimension embedding.\n    An triplet satisfaction score is calculated by evaluating how many randomly\n    selected triplets have been violated. Each point will generate 5 triplets.\n    Input:\n        X: A numpy array with the shape [N, p]. The higher dimension embedding\n           of some dataset. Expected to have some clusters.\n        X_new: A numpy array with the shape [N, k]. The lower dimension embedding\n               of some dataset. Expected to have some clusters as well.",
+        "detail": "evaluation.evaluation",
+        "documentation": {}
+    },
+    {
+        "label": "evaluate_output",
+        "kind": 2,
+        "importPath": "evaluation.evaluation",
+        "description": "evaluation.evaluation",
+        "peekOfCode": "def evaluate_output(X, X_new, y, name, baseline=False, labelled=True):\n    results = {}\n    results['name'] = name\n    if labelled:\n        if baseline:\n            baseline_knn_accs = knn_eval_series(X, y)\n            baseline_svm_acc = faster_svm_eval(X, y)\n            results['baseline_knn'] = baseline_knn_accs\n            results['baseline_svm'] = baseline_svm_acc\n        knn_accs = knn_eval_series(X_new, y)",
+        "detail": "evaluation.evaluation",
+        "documentation": {}
+    },
+    {
+        "label": "evaluate_output_non_svm",
+        "kind": 2,
+        "importPath": "evaluation.evaluation",
+        "description": "evaluation.evaluation",
+        "peekOfCode": "def evaluate_output_non_svm(X, X_new, y, name, baseline=False, labelled=True):\n    results = {}\n    results['name'] = name\n    if labelled:\n        if baseline:\n            baseline_knn_accs = knn_eval_series(X, y)\n            results['baseline_knn'] = baseline_knn_accs\n        knn_accs = knn_eval_series(X_new, y)\n        cte_acc = centroid_triplet_eval(X, X_new, y)\n        results['knn'] = knn_accs",
+        "detail": "evaluation.evaluation",
+        "documentation": {}
+    },
+    {
+        "label": "evaluate_output_cte_only",
+        "kind": 2,
+        "importPath": "evaluation.evaluation",
+        "description": "evaluation.evaluation",
+        "peekOfCode": "def evaluate_output_cte_only(X, X_new, y, name, baseline=False, labelled=True):\n    results = {}\n    results['name'] = name\n    if labelled:\n        knn_accs = knn_eval_series(X_new, y)\n        cte_acc = centroid_triplet_eval(X, X_new, y)\n        results['knn'] = knn_accs\n        results['cte'] = cte_acc\n    rte_acc = random_triplet_eval(X, X_new, y)\n    results['rte'] = rte_acc",
+        "detail": "evaluation.evaluation",
+        "documentation": {}
+    },
+    {
+        "label": "evaluate_output_svm_only",
+        "kind": 2,
+        "importPath": "evaluation.evaluation",
+        "description": "evaluation.evaluation",
+        "peekOfCode": "def evaluate_output_svm_only(X, X_new, y, name, baseline=False, labelled=True):\n    results = {}\n    results['name'] = name\n    if labelled:\n        if baseline:\n            baseline_svm_acc = faster_svm_eval(X, y)\n            results['baseline_svm'] = baseline_svm_acc\n        svm_acc = faster_svm_eval(X_new, y)\n        results['svm'] = svm_acc\n    return results",
+        "detail": "evaluation.evaluation",
+        "documentation": {}
+    },
+    {
+        "label": "fetch_output",
+        "kind": 2,
+        "importPath": "evaluation.evaluation",
+        "description": "evaluation.evaluation",
+        "peekOfCode": "def fetch_output(dataset_name='MNIST'):\n    location = '../output'\n    all_file = os.listdir(location)\n    selected_file = []\n    for file in all_file:\n        if file[:len(dataset_name)] == dataset_name and file[len(dataset_name)+1] != 'h' and file[len(dataset_name)+1] != 'b':\n            selected_file.append(file)\n    return selected_file\ndef evaluate_category(dataset_name='MNIST', labelled=True, data_pca=True, svm=True, svm_only=False):\n    if data_pca:",
+        "detail": "evaluation.evaluation",
+        "documentation": {}
+    },
+    {
+        "label": "evaluate_category",
+        "kind": 2,
+        "importPath": "evaluation.evaluation",
+        "description": "evaluation.evaluation",
+        "peekOfCode": "def evaluate_category(dataset_name='MNIST', labelled=True, data_pca=True, svm=True, svm_only=False):\n    if data_pca:\n        print('data_pca')\n    if svm:\n        print('svm')\n    if svm_only:\n        print('svm_only')\n    X, y = data_prep(dataset_name, 70000)\n    if X.shape[1] > 100:\n        if data_pca and dataset_name != 'Mouse_scRNA':",
+        "detail": "evaluation.evaluation",
+        "documentation": {}
+    },
+    {
+        "label": "fetch_LargeVis",
+        "kind": 2,
+        "importPath": "evaluation.evaluation",
+        "description": "evaluation.evaluation",
+        "peekOfCode": "def fetch_LargeVis(dataset_name='MNIST'):\n    location = '../output'\n    all_file = os.listdir(location)\n    selected_file = []\n    for file in all_file:\n        # To solve the error of LargeVis\n        if file[len(dataset_name)+1] != 'L':\n            continue\n        if file[:len(dataset_name)] == dataset_name and file[len(dataset_name)+1] != 'h':\n            selected_file.append(file)",
+        "detail": "evaluation.evaluation",
+        "documentation": {}
+    },
+    {
+        "label": "evaluate_LargeVis",
+        "kind": 2,
+        "importPath": "evaluation.evaluation",
+        "description": "evaluation.evaluation",
+        "peekOfCode": "def evaluate_LargeVis(dataset_name='MNIST', labelled=True, data_pca=True, svm=True, svm_only=False):\n    X, y = data_prep(dataset_name, 70000)\n    if X.shape[1] > 100:\n        if data_pca and dataset_name != 'Mouse_scRNA':\n            pca = PCA(n_components=100)\n            X = pca.fit_transform(X)\n        elif data_pca and dataset_name == 'Mouse_scRNA':\n            pca = PCA(n_components=1000)\n            X = pca.fit_transform(X)\n    location = '../output'",
+        "detail": "evaluation.evaluation",
+        "documentation": {}
+    },
+    {
+        "label": "evaluate_npy",
+        "kind": 2,
+        "importPath": "evaluation.evaluation",
+        "description": "evaluation.evaluation",
+        "peekOfCode": "def evaluate_npy(selected_file, dataset_name='MNIST', labelled=True, data_pca=True, svm=True):\n    size_arg = 10000000\n    if dataset_name == 's_curve' or dataset_name == 's_curve_hole':\n        size_arg = 10000\n    X, y = data_prep(dataset_name, size_arg)\n    if X.shape[1] > 100:\n        if data_pca and dataset_name != 'Mouse_scRNA':\n            pca = PCA(n_components=100)\n            X = pca.fit_transform(X)\n        elif data_pca and dataset_name == 'Mouse_scRNA':",
+        "detail": "evaluation.evaluation",
+        "documentation": {}
+    },
+    {
+        "label": "evaluate_ctes",
+        "kind": 2,
+        "importPath": "evaluation.evaluation",
+        "description": "evaluation.evaluation",
+        "peekOfCode": "def evaluate_ctes(selected_file, dataset_name='MNIST', labelled=True, data_pca=True):\n    size_arg = 10000000\n    if dataset_name == 's_curve' or dataset_name == 's_curve_hole':\n        size_arg = 10000\n    X, y = data_prep(dataset_name, size_arg)\n    if X.shape[1] > 100:\n        if data_pca and dataset_name != 'Mouse_scRNA':\n            pca = PCA(n_components=100)\n            X = pca.fit_transform(X)\n        elif data_pca and dataset_name == 'Mouse_scRNA':",
+        "detail": "evaluation.evaluation",
+        "documentation": {}
+    },
+    {
+        "label": "evaluate_rtes",
+        "kind": 2,
+        "importPath": "evaluation.evaluation",
+        "description": "evaluation.evaluation",
+        "peekOfCode": "def evaluate_rtes(selected_file, dataset_name='MNIST', labelled=True, data_pca=True):\n    size_arg = 10000000\n    if dataset_name == 's_curve' or dataset_name == 's_curve_hole':\n        size_arg = 10000\n    X, y = data_prep(dataset_name, size_arg)\n    if X.shape[1] > 100:\n        if data_pca and dataset_name != 'Mouse_scRNA':\n            pca = PCA(n_components=100)\n            X = pca.fit_transform(X)\n        elif data_pca and dataset_name == 'Mouse_scRNA':",
+        "detail": "evaluation.evaluation",
+        "documentation": {}
+    },
+    {
+        "label": "print_evaluation_results",
+        "kind": 2,
+        "importPath": "evaluation.evaluation",
+        "description": "evaluation.evaluation",
+        "peekOfCode": "def print_evaluation_results(results):\n    \"\"\"Prints the results of results['name']\n    results['knn'] is a series of accuracies for the given n_neighbors\n    (defaults to n_neighbors_list=[1, 3, 5, 10, 15, 20, 25, 30])\n    Args:\n        results (_type_): _description_\n    \"\"\"\n    print(f\"\\nThe results of {results['name']}:\")\n    if results['knn'] is list:\n        print(f\"KNN accuracies (for different n_neighbors):\\t{results['knn']}\")",
+        "detail": "evaluation.evaluation",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "unused.demo",
+        "description": "unused.demo",
+        "peekOfCode": "def main():\n    sns.set(style='white', context='notebook', rc={'figure.figsize':(14,10)})\n    digits = load_digits()\n    # print(digits.DESCR)\n    \"\"\"fig, ax_array = plt.subplots(20, 20)\n    axes = ax_array.flatten()\n    for i, ax in enumerate(axes):\n        ax.imshow(digits.images[i], cmap='gray_r')\n    plt.setp(axes, xticks=[], yticks=[], frame_on=False)\n    plt.tight_layout(h_pad=0.5, w_pad=0.01)",
+        "detail": "unused.demo",
+        "documentation": {}
+    },
+    {
+        "label": "evaluate",
+        "kind": 2,
+        "importPath": "unused.evaluation_old",
+        "description": "unused.evaluation_old",
+        "peekOfCode": "def evaluate(embedding, labels):\n    knn_accuracy = _calculate_knn_accuracy(embedding, labels)\n    svm_accuracy, svm_accuracy_std = _calculate_svm_accuracy(embedding, labels)\n    random_triplet_accuracy = _calculate_random_triplet_accuracy(embedding)\n    centroid_triplet_accuracy = _calculate_centroid_triplet_accuracy(embedding, labels)\n    results = [\n        ['KNN Accuracy', knn_accuracy], \n        ['SVM Accuracy', svm_accuracy], \n        ['Random Triplet Accuracy', random_triplet_accuracy], \n        ['Centroid Triplet Accuracy', centroid_triplet_accuracy]",
+        "detail": "unused.evaluation_old",
+        "documentation": {}
+    },
+    {
+        "label": "data_prep",
+        "kind": 2,
+        "importPath": "utils.run_script",
+        "description": "utils.run_script",
+        "peekOfCode": "def data_prep(data_path, dataset='MNIST', size=10000):\n    '''\n    This function loads the dataset as numpy array.\n    Input:\n        data_path: path of the folder you store all the data needed.\n        dataset: the name of the dataset.\n        size: the size of the dataset. This is useful when you only\n              want to pick a subset of the data\n    Output:\n        X: the dataset in numpy array",
+        "detail": "utils.run_script",
+        "documentation": {}
+    },
+    {
+        "label": "plot_embeddings",
+        "kind": 2,
+        "importPath": "visualization.visualization",
+        "description": "visualization.visualization",
+        "peekOfCode": "def plot_embeddings(embeddings,\n                    y,\n                    n_neighbors,\n                    #n_knn_neighbors,\n                    data_title,\n                    dot_size=100, \n                    alpha=0.5, \n                    fig_path='figures', \n                    fig_name='figure', \n                    cmap='Paired',",
+        "detail": "visualization.visualization",
+        "documentation": {}
+    },
+    {
+        "label": "RANDOM_SEED",
+        "kind": 5,
+        "importPath": "PARAMETERS",
+        "description": "PARAMETERS",
+        "peekOfCode": "RANDOM_SEED = 42",
+        "detail": "PARAMETERS",
+        "documentation": {}
+    },
+    {
+        "label": "get_dataset_by_name",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def get_dataset_by_name(name='Digits'):\n    \"\"\"Loads the dataset of choice.\n    Args:\n        name (str, optional): Name of the dataset. Defaults to 'Digits'.\n    Returns:\n        (array, array): X (data/features) and y (target/labels)\n    \"\"\"\n    if name == 'Digits':\n        digits = datasets.load_digits()\n        X = digits.data",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "get_best_result_and_corresponding_parameters",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def get_best_result_and_corresponding_parameters(\n    Xs,\n    results, \n    params,\n    knn_neighbors=[1, 3, 5, 10, 15, 20, 25, 30]):\n    print('\\nCalculating best results')\n    best_Xs = {}\n    best_result = {}\n    best_result['knn'] = float('-inf')\n    best_result['svm'] = float('-inf')",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "hyperparameter_tuning",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def hyperparameter_tuning(X, \n                          y, \n                          algorithm='UMAP', \n                          ns_neighbors=[5, 10, 20, 50, 100]):\n    print(f'\\nHyperparameter tuning for {algorithm}:\\n')\n    Xs_new = []\n    results = []\n    if algorithm == 'UMAP':\n        for n_neighbors in ns_neighbors:\n            print(f'Calculating results for {n_neighbors} neighbors')",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "visualize_and_print_results",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def visualize_and_print_results(Xs_new_umap,\n                                Xs_new_pacmap,\n                                knn_neighbors_umap,\n                                knn_neighbors_pacmap,\n                                results_umap,\n                                results_pacmap,\n                                params_umap,\n                                params_pacmap,\n                                y,\n                                dataset_name):",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "def main(dataset_name, data_path='data', figure_path='figures'):\n    print('\\nInitializing UMAP and PaCMAP calculations\\n')\n    np.random.seed(RANDOM_SEED)  # Set random seed\n    X, y = get_dataset_by_name(dataset_name)  # Load data\n    # UMAP\n    Xs_new_umap, results_umap, params_umap, knn_neighbors_umap = hyperparameter_tuning(X, y, algorithm='UMAP')\n    X_new_umap = Xs_new_umap['knn']\n    # PaCMAP\n    Xs_new_pacmap, results_pacmap, params_pacmap, knn_neighbors_pacmap = hyperparameter_tuning(X, y, algorithm='PaCMAP')\n    visualize_and_print_results(Xs_new_umap,",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "module_paths",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "module_paths = ['algorithms', 'evaluation', 'visualization']  # './path' if main is in a folder\nsys.path[0:0] = module_paths\n# Import packages\nfrom sklearn import datasets\nfrom umap_reducer import UMAP_reducer\nfrom pacmap_reducer import PaCMAP_reducer\nimport evaluation\nimport visualization\nfrom PARAMETERS import RANDOM_SEED\ndef get_dataset_by_name(name='Digits'):",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "sys.path[0:0]",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "sys.path[0:0] = module_paths\n# Import packages\nfrom sklearn import datasets\nfrom umap_reducer import UMAP_reducer\nfrom pacmap_reducer import PaCMAP_reducer\nimport evaluation\nimport visualization\nfrom PARAMETERS import RANDOM_SEED\ndef get_dataset_by_name(name='Digits'):\n    \"\"\"Loads the dataset of choice.",
+        "detail": "main",
+        "documentation": {}
+    }
+]
