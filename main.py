@@ -1,64 +1,23 @@
-import sys
-import numpy as np
-from PARAMETERS import*
-
 # Insert module paths
-module_paths = ['algorithms', 'evaluation', 'visualization']  # './path' if main is in a folder
+import sys
+module_paths = ['algorithms', 
+                'data', 
+                'evaluation',
+                'results', 
+                'utils',
+                'visualization']  # './path' if main is in a folder
 sys.path[0:0] = module_paths
 
-# Import packages
-from sklearn import datasets
+# Import packages and modules
 from umap_reducer import UMAP_reducer
 from pacmap_reducer import PaCMAP_reducer
 import evaluation
 import visualization
-from PARAMETERS import RANDOM_SEED
-
-
-def get_dataset_by_name(name='Digits'):
-    """Loads the dataset of choice.
-
-    Args:
-        name (str, optional): Name of the dataset. Defaults to 'Digits'.
-
-    Returns:
-        (array, array): X (data/features) and y (target/labels)
-    """
-    if name == 'Digits':
-        digits = datasets.load_digits()
-        X = digits.data
-        y = digits.target
-
-    elif name == 'Iris':  # Low-dimensional (4D)
-        iris = datasets.load_iris()
-        X = iris.data
-        y = iris.target
-
-    elif name == 'CIFAR-10':
-        cifar10 = datasets.fetch_openml(name='CIFAR_10', version=1)
-        X = cifar10['data'], 
-        y = cifar10['target'].astype(int)
-        
-    elif name == 'CIFAR-100':
-        cifar100 = datasets.fetch_openml(name='CIFAR_100', version=1)
-        X = cifar100['data']
-        X.reshape(X.shape[0], -1)
-        y = cifar100['target'].astype(int)
-        
-    elif name == 'LFW':
-        lfw = datasets.fetch_lfw_people(min_faces_per_person=70, resize=0.4)
-        X, y = lfw.data, lfw.target
-        X = X.reshape(X.shape[0], -1)
-
-    elif name == 'COIL-20':
-        # loading preprocessed coil_20 dataset
-        # you can change it with any dataset that is in the ndarray format, with the shape (N, D)
-        # where N is the number of samples and D is the dimension of each sample
-        X = np.load('./data/coil_20.npy', allow_pickle=True)
-        X = X.reshape(X.shape[0], -1)
-        y = np.load('./data/coil_20_labels.npy', allow_pickle=True)
-    
-    return X, y
+import numpy as np
+from load_data import get_dataset_by_name
+import results as res
+import utils
+from CONSTANTS import *
 
 
 def get_best_result_and_corresponding_parameters(
@@ -106,7 +65,7 @@ def get_best_result_and_corresponding_parameters(
             best_param['rte'] = params[i]
     
     print('Best results calculated\n')
-    return best_Xs, best_result, best_param, best_knn_neighbors
+    return res.Results(best_Xs, best_result, best_param, best_knn_neighbors)
 
 
 def hyperparameter_tuning(X, 
@@ -115,7 +74,7 @@ def hyperparameter_tuning(X,
                           ns_neighbors=[5, 10, 20, 50, 100]):
     print(f'\nHyperparameter tuning for {algorithm}:\n')
     Xs_new = []
-    results = []
+    metric_results = []
 
     if algorithm == 'UMAP':
         for n_neighbors in ns_neighbors:
@@ -125,7 +84,7 @@ def hyperparameter_tuning(X,
             X_new_umap = umap.get_embedding()
             result_umap = evaluation.evaluate_output(X, X_new_umap, y, 'UMAP')
             Xs_new.append(X_new_umap)
-            results.append(result_umap)
+            metric_results.append(result_umap)
 
     elif algorithm == 'PaCMAP':
         for n_neighbors in ns_neighbors:
@@ -135,97 +94,123 @@ def hyperparameter_tuning(X,
             X_new_pacmap = pacmap.get_embedding()
             result_pacmap = evaluation.evaluate_output(X, X_new_pacmap, y, 'PaCMAP')
             Xs_new.append(X_new_pacmap)
-            results.append(result_pacmap)
+            metric_results.append(result_pacmap)
     else:
         print('Not a valid algorithm for hyperparameter tuning (can only be "UMAP" or "PaCMAP")')
 
-    best_Xs, best_result, best_param, best_knn_neighbors = get_best_result_and_corresponding_parameters(
+    results = get_best_result_and_corresponding_parameters(
         Xs_new, 
-        results, 
+        metric_results, 
         ns_neighbors)
     
-    best_result['name'] = algorithm
+    results.metric_results['name'] = algorithm
     print(f'Done with hyperparameter tuning for {algorithm}\n')
     
-    return best_Xs, best_result, best_param, best_knn_neighbors
+    return results
 
 
-def visualize_and_print_results(Xs_new_umap,
-                                Xs_new_pacmap,
-                                knn_neighbors_umap,
-                                knn_neighbors_pacmap,
-                                results_umap,
+def visualize_and_print_results(results_umap,
                                 results_pacmap,
-                                params_umap,
-                                params_pacmap,
                                 y,
-                                dataset_name):
+                                dataset_name,
+                                cmap,
+                                max_datapoints=10000):
     # Print results of both algorithms
-    evaluation.print_evaluation_results(results_umap)
-    evaluation.print_evaluation_results(results_pacmap)
-
-    print('knn_neighbors_umap:', knn_neighbors_umap)
-    print('knn_neighbors_pacmap:', knn_neighbors_pacmap)
-    
-    print('params_umap', params_umap)
-    print('params_pacmap', params_pacmap)
+    res.print_results(results_umap, results_pacmap)
     
     metrics = ['knn', 'svm', 'cte', 'rte']
     title_metrics = ['KNN', 'SVM', 'centroid triplet', 'random triplet']
     
-    # Plot all visualizations
+    # Create and save all visualizations
     for metric, title_metric in zip(metrics, title_metrics):
-        visualization.plot_embeddings(embeddings=[{'UMAP': Xs_new_umap[metric]},
-                                                  {'PaCMAP': Xs_new_pacmap[metric]}],
+        embedding_umap = results_umap.Xs[metric]
+        embedding_pacmap = results_pacmap.Xs[metric]
+        
+        if embedding_umap.shape[0] > max_datapoints and max_datapoints is not None:
+            embedding_umap = embedding_umap[:max_datapoints, :max_datapoints]
+            embedding_pacmap = embedding_pacmap[:max_datapoints, :max_datapoints]
+            y = y[:max_datapoints]
+        
+        fig_path = f'figures/{dataset_name}'
+        utils.create_directory_if_not_exists(fig_path)
+        
+        if cmap is None:
+            if dataset_name != 'Circle2D' and embedding_umap.shape[0] <= 12:
+                cmap = DISCRETE_CMAP
+            elif dataset_name != 'Circle2D':
+                cmap = CONTINUOUS_CMAP
+            else:
+                cmap = CYCLIC_CMAP
+            
+        visualization.plot_embeddings(embeddings=[{'UMAP': embedding_umap},
+                                                  {'PaCMAP': embedding_pacmap}],
                                     y=y, 
                                     data_title=dataset_name,
                                     fig_name=f'fig_{dataset_name}_{metric}',
-                                    n_neighbors=[params_umap[metric],
-                                                params_pacmap[metric]],
-                                    #n_knn_neighbors=[knn_neighbors_umap, knn_neighbors_pacmap],
-                                    metric=title_metric)
+                                    fig_path=fig_path,
+                                    n_neighbors=[results_umap.params[metric],
+                                                results_pacmap.params[metric]],
+                                    metric=title_metric,
+                                    dot_size=int(1000 / np.sqrt(embedding_umap.shape[0])),
+                                    cmap=cmap)
 
 
-def main(dataset_name, data_path='data', figure_path='figures'):
-    print('\nInitializing UMAP and PaCMAP calculations\n')
-    np.random.seed(RANDOM_SEED)  # Set random seed
+def main(dataset_name, 
+         data_path='data', 
+         figure_path='figures', 
+         read_results=False, 
+         cmap=None):
+
     X, y = get_dataset_by_name(dataset_name)  # Load data
     
-    # UMAP
-    Xs_new_umap, results_umap, params_umap, knn_neighbors_umap = hyperparameter_tuning(X, y, algorithm='UMAP')
-    X_new_umap = Xs_new_umap['knn']
+    if not read_results: 
+        print('\nInitializing UMAP and PaCMAP calculations ' \
+        f'for {dataset_name} dataset\n')       
+
+        # UMAP
+        results_umap = hyperparameter_tuning(X, 
+                                             y, 
+                                             algorithm='UMAP')
+        res.write_results_to_file(results_umap, 
+                                  f'res_UMAP_{dataset_name}')
+        
+        # PaCMAP
+        results_pacmap = hyperparameter_tuning(X, 
+                                               y, 
+                                               algorithm='PaCMAP')
+        res.write_results_to_file(results_pacmap, 
+                                  f'res_PaCMAP_{dataset_name}')   
+    else:
+        print('Initializing reading of stored results ' \
+            f'for {dataset_name} dataset\n')
+
+        # UMAP
+        results_umap = res.read_results_from_file(
+            file_name=f'res_UMAP_{dataset_name}')
+        
+        # PaCMAP
+        results_pacmap = res.read_results_from_file(
+            file_name=f'res_PaCMAP_{dataset_name}')
     
-    # PaCMAP
-    Xs_new_pacmap, results_pacmap, params_pacmap, knn_neighbors_pacmap = hyperparameter_tuning(X, y, algorithm='PaCMAP')
-    
-    visualize_and_print_results(Xs_new_umap,
-                                Xs_new_pacmap,
-                                knn_neighbors_umap,
-                                knn_neighbors_pacmap,
-                                results_umap,
-                                results_pacmap,
-                                params_umap,
-                                params_pacmap,
-                                y,
-                                dataset_name)
+    visualize_and_print_results(results_umap, 
+                                results_pacmap, 
+                                y, 
+                                dataset_name, 
+                                cmap)
     
     
 if __name__ == '__main__':
-    main('Digits')  # Choose the dataset you want to use
+    # read_results can only be set to True  
+    # if the corresponding file exists in results/results_files
     
-    #data_path = "./data/"
-    #output_path = "./output/"
-    #experiments.main(data_path, output_path,'MNIST', 10000000)
-    """main(data_path, output_path,'FMNIST', 10000000)
-    main(data_path, output_path,'coil_20', 10000000)
-    main(data_path, output_path,'coil_100', 10000000)
-
-    main(data_path, output_path,'Mouse_scRNA', 10000000)
-    main(data_path, output_path,'mammoth', 10000000)
-    main(data_path, output_path,'s_curve_hole', 10000)
-    main(data_path, output_path,'20NG', 20000)
-    main(data_path, output_path,'USPS', 20000)
-
-
-    main(data_path, output_path,'Flow_cytometry', 10000000)
-    main(data_path, output_path,'kddcup99', 10000000)"""    
+    #main('Iris', read_results=True)
+    #main('Digits', read_results=True)
+    #main('MNIST', read_results=True)
+    #main('FMNIST', read_results=True)
+    #main('CIFAR-10', read_results=True)
+    #main('CIFAR-100', read_results=True)
+    #main('Spiral3D', read_results=True)
+    main('Circle2D', read_results=True)
+    
+    pass
+    

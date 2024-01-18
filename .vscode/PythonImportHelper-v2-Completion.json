@@ -9,12 +9,67 @@
         "documentation": {}
     },
     {
-        "label": "matplotlib.pyplot",
-        "kind": 6,
+        "label": "*",
+        "importPath": "CONSTANTS",
+        "description": "CONSTANTS",
         "isExtraImport": true,
-        "importPath": "matplotlib.pyplot",
-        "description": "matplotlib.pyplot",
-        "detail": "matplotlib.pyplot",
+        "detail": "CONSTANTS",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "CONSTANTS",
+        "description": "CONSTANTS",
+        "isExtraImport": true,
+        "detail": "CONSTANTS",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "CONSTANTS",
+        "description": "CONSTANTS",
+        "isExtraImport": true,
+        "detail": "CONSTANTS",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "CONSTANTS",
+        "description": "CONSTANTS",
+        "isExtraImport": true,
+        "detail": "CONSTANTS",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "CONSTANTS",
+        "description": "CONSTANTS",
+        "isExtraImport": true,
+        "detail": "CONSTANTS",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "CONSTANTS",
+        "description": "CONSTANTS",
+        "isExtraImport": true,
+        "detail": "CONSTANTS",
+        "documentation": {}
+    },
+    {
+        "label": "*",
+        "importPath": "CONSTANTS",
+        "description": "CONSTANTS",
+        "isExtraImport": true,
+        "detail": "CONSTANTS",
+        "documentation": {}
+    },
+    {
+        "label": "UMAP",
+        "importPath": "umap.umap_",
+        "description": "umap.umap_",
+        "isExtraImport": true,
+        "detail": "umap.umap_",
         "documentation": {}
     },
     {
@@ -27,6 +82,33 @@
         "documentation": {}
     },
     {
+        "label": "matplotlib.pyplot",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "matplotlib.pyplot",
+        "description": "matplotlib.pyplot",
+        "detail": "matplotlib.pyplot",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "utils",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "utils",
+        "description": "utils",
+        "detail": "utils",
+        "documentation": {}
+    },
+    {
         "label": "seaborn",
         "kind": 6,
         "isExtraImport": true,
@@ -36,27 +118,46 @@
         "documentation": {}
     },
     {
-        "label": "Axes3D",
-        "importPath": "mpl_toolkits.mplot3d",
-        "description": "mpl_toolkits.mplot3d",
+        "label": "datasets",
+        "importPath": "sklearn",
+        "description": "sklearn",
         "isExtraImport": true,
-        "detail": "mpl_toolkits.mplot3d",
+        "detail": "sklearn",
         "documentation": {}
     },
     {
-        "label": "Axes3D",
-        "importPath": "mpl_toolkits.mplot3d",
-        "description": "mpl_toolkits.mplot3d",
+        "label": "tensorflow.keras",
+        "kind": 6,
         "isExtraImport": true,
-        "detail": "mpl_toolkits.mplot3d",
+        "importPath": "tensorflow.keras",
+        "description": "tensorflow.keras",
+        "detail": "tensorflow.keras",
         "documentation": {}
     },
     {
-        "label": "UMAP",
-        "importPath": "umap.umap_",
-        "description": "umap.umap_",
+        "label": "spiral3D",
+        "kind": 6,
         "isExtraImport": true,
-        "detail": "umap.umap_",
+        "importPath": "spiral3D",
+        "description": "spiral3D",
+        "detail": "spiral3D",
+        "documentation": {}
+    },
+    {
+        "label": "circle2D",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "circle2D",
+        "description": "circle2D",
+        "detail": "circle2D",
+        "documentation": {}
+    },
+    {
+        "label": "mplot3d",
+        "importPath": "mpl_toolkits",
+        "description": "mpl_toolkits",
+        "isExtraImport": true,
+        "detail": "mpl_toolkits",
         "documentation": {}
     },
     {
@@ -106,10 +207,10 @@
     },
     {
         "label": "data_prep",
-        "importPath": "utils.run_script",
-        "description": "utils.run_script",
+        "importPath": "run_script",
+        "description": "run_script",
         "isExtraImport": true,
-        "detail": "utils.run_script",
+        "detail": "run_script",
         "documentation": {}
     },
     {
@@ -273,6 +374,15 @@
         "documentation": {}
     },
     {
+        "label": "pandas",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pandas",
+        "description": "pandas",
+        "detail": "pandas",
+        "documentation": {}
+    },
+    {
         "label": "load_digits",
         "importPath": "sklearn.datasets",
         "description": "sklearn.datasets",
@@ -331,15 +441,6 @@
         "documentation": {}
     },
     {
-        "label": "pandas",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "pandas",
-        "description": "pandas",
-        "detail": "pandas",
-        "documentation": {}
-    },
-    {
         "label": "ListedColormap",
         "importPath": "matplotlib.colors",
         "description": "matplotlib.colors",
@@ -354,23 +455,6 @@
         "importPath": "matplotlib",
         "description": "matplotlib",
         "detail": "matplotlib",
-        "documentation": {}
-    },
-    {
-        "label": "sys",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "sys",
-        "description": "sys",
-        "detail": "sys",
-        "documentation": {}
-    },
-    {
-        "label": "datasets",
-        "importPath": "sklearn",
-        "description": "sklearn",
-        "isExtraImport": true,
-        "detail": "sklearn",
         "documentation": {}
     },
     {
@@ -399,11 +483,20 @@
         "documentation": {}
     },
     {
-        "label": "RANDOM_SEED",
-        "importPath": "PARAMETERS",
-        "description": "PARAMETERS",
+        "label": "get_dataset_by_name",
+        "importPath": "load_data",
+        "description": "load_data",
         "isExtraImport": true,
-        "detail": "PARAMETERS",
+        "detail": "load_data",
+        "documentation": {}
+    },
+    {
+        "label": "results",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "results",
+        "description": "results",
+        "detail": "results",
         "documentation": {}
     },
     {
@@ -411,7 +504,7 @@
         "kind": 6,
         "importPath": "algorithms.pacmap_reducer",
         "description": "algorithms.pacmap_reducer",
-        "peekOfCode": "class PaCMAP_reducer:\n    def __init__(self, n_components=2, n_neighbors=None, MN_ratio=0.5, FP_ratio=2.0):\n        \"\"\"\n        n_neighbors=None leads to default choice:\n        - For dataset whose sample size < 10000: 10\n        - For dataset whose sample size n > 10000: 10 + 15 * (log10(n) - 4)\n        \"\"\"\n        self.reducer = pacmap.PaCMAP(n_components=n_components, n_neighbors=n_neighbors, MN_ratio=MN_ratio, FP_ratio=FP_ratio)  \n    def fit(self, X):\n        # X_transformed = embedding.fit_transform(X, init='pca')",
+        "peekOfCode": "class PaCMAP_reducer:\n    def __init__(self, n_components=2, n_neighbors=None, MN_ratio=0.5, FP_ratio=2.0):\n        \"\"\"\n        n_neighbors=None leads to default choice:\n        - For dataset whose sample size < 10000: 10\n        - For dataset whose sample size n > 10000: 10 + 15 * (log10(n) - 4)\n        \"\"\"\n        self.reducer = pacmap.PaCMAP(n_components=n_components, \n                                     n_neighbors=n_neighbors, \n                                     MN_ratio=MN_ratio, ",
         "detail": "algorithms.pacmap_reducer",
         "documentation": {}
     },
@@ -420,8 +513,53 @@
         "kind": 6,
         "importPath": "algorithms.umap_reducer",
         "description": "algorithms.umap_reducer",
-        "peekOfCode": "class UMAP_reducer:\n    def __init__(self, min_dist=0.1, n_components=2, n_epochs=500, n_neighbors=1000):\n        self.reducer = UMAP(min_dist=min_dist, n_components=n_components, n_epochs=n_epochs, n_neighbors=n_neighbors)       \n    def fit(self, X):\n        self.reducer.fit(X)\n    def get_embedding(self):\n        return self.reducer.embedding_\n    def plot_embedding(self, y, data_title):\n        assert hasattr(self.reducer, 'embedding_'), \"UMAP reducer not fitted to data. Call the 'fit' method first.\"\n        sns.set(style='white', context='notebook', rc={'figure.figsize':(14,10)})",
+        "peekOfCode": "class UMAP_reducer:\n    def __init__(self, min_dist=0.1, n_components=2, n_epochs=500, n_neighbors=1000):\n        self.reducer = UMAP(min_dist=min_dist, \n                            n_components=n_components, \n                            n_epochs=n_epochs, \n                            n_neighbors=n_neighbors,\n                            random_state=RANDOM_SEED)       \n    def fit(self, X):\n        self.reducer.fit(X)\n    def get_embedding(self):",
         "detail": "algorithms.umap_reducer",
+        "documentation": {}
+    },
+    {
+        "label": "Circle2D",
+        "kind": 6,
+        "importPath": "data.circle2D",
+        "description": "data.circle2D",
+        "peekOfCode": "class Circle2D:\n    def __init__(self, circle_factor=30, n_points=100):\n        self.theta = np.linspace(0, 2 * np.pi, n_points)\n        self.x = circle_factor * np.cos(self.theta)\n        self.y = circle_factor * np.sin(self.theta)\n        c = np.linspace(0, 1, n_points)\n        bin_edges = np.linspace(0, 1, n_points // 5)\n        self.c = np.digitize(c, bin_edges, right=True)\n    def plot_circle(self, fig_path='figures', fig_name='fig_Circle2D'):\n        plt.figure()",
+        "detail": "data.circle2D",
+        "documentation": {}
+    },
+    {
+        "label": "ColoredCircles",
+        "kind": 6,
+        "importPath": "data.colored_circles",
+        "description": "data.colored_circles",
+        "peekOfCode": "class ColoredCircles:\n    def __init__(self, points_per_class=50, image_size=100, data_path='data/colored_circles'):\n        self.num_classes = 4\n        self.points_per_class = points_per_class\n        self.image_size = image_size\n        self.dpi = plt.rcParams['figure.dpi']  # pixel in inches\n        # Create a list to store the image data\n        self.image_data = []\n        self.data_path = data_path\n        utils.create_directory_if_not_exists(data_path)",
+        "detail": "data.colored_circles",
+        "documentation": {}
+    },
+    {
+        "label": "cc",
+        "kind": 5,
+        "importPath": "data.colored_circles",
+        "description": "data.colored_circles",
+        "peekOfCode": "cc = ColoredCircles()\nX, y = cc.get_dataset()",
+        "detail": "data.colored_circles",
+        "documentation": {}
+    },
+    {
+        "label": "get_dataset_by_name",
+        "kind": 2,
+        "importPath": "data.load_data",
+        "description": "data.load_data",
+        "peekOfCode": "def get_dataset_by_name(name='Digits'):\n    \"\"\"Loads the dataset of choice.\n    Args:\n        name (str, optional): Name of the dataset. Defaults to 'Digits'.\n    Returns:\n        (1d array, 1d array): X (data, or features) and y (target, or labels)\n    \"\"\"\n    if name == 'Digits':  # 64 dimensions\n        digits = datasets.load_digits()\n        X = digits.data",
+        "detail": "data.load_data",
+        "documentation": {}
+    },
+    {
+        "label": "Spiral3D",
+        "kind": 6,
+        "importPath": "data.spiral3D",
+        "description": "data.spiral3D",
+        "peekOfCode": "class Spiral3D:\n    def __init__(self, spiral_factor=30, n_points=400):\n        self.z = np.linspace(0, 1, n_points)\n        self.x = self.z * np.sin(spiral_factor * self.z)\n        self.y = self.z * np.cos(spiral_factor * self.z)\n        c = np.linspace(0, 1, n_points)\n        bin_edges = np.linspace(0, 1, n_points // 5)  #  // 10\n        self.c = np.digitize(c, bin_edges, right=True)\n    def plot_spiral(self, fig_path='figures', fig_name='fig_Spiral3D'):\n        fig = plt.figure()",
+        "detail": "data.spiral3D",
         "documentation": {}
     },
     {
@@ -650,6 +788,42 @@
         "documentation": {}
     },
     {
+        "label": "Results",
+        "kind": 6,
+        "importPath": "results.results",
+        "description": "results.results",
+        "peekOfCode": "class Results():\n    def __init__(self, Xs, metric_results, params, n_knn_neighbors):\n        self.Xs = Xs\n        self.metric_results = metric_results\n        self.params = params\n        self.n_knn_neighbors = n_knn_neighbors\ndef print_results(results_umap, results_pacmap):\n    table = [[results_umap.metric_results['knn'], \n                results_umap.params['knn'], \n                results_pacmap.metric_results['knn'], ",
+        "detail": "results.results",
+        "documentation": {}
+    },
+    {
+        "label": "print_results",
+        "kind": 2,
+        "importPath": "results.results",
+        "description": "results.results",
+        "peekOfCode": "def print_results(results_umap, results_pacmap):\n    table = [[results_umap.metric_results['knn'], \n                results_umap.params['knn'], \n                results_pacmap.metric_results['knn'], \n                results_pacmap.params['knn']],\n             [results_umap.metric_results['svm'],\n                results_umap.params['svm'],\n                results_pacmap.metric_results['svm'],\n                results_pacmap.params['svm']],\n             [results_umap.metric_results['cte'], ",
+        "detail": "results.results",
+        "documentation": {}
+    },
+    {
+        "label": "write_results_to_file",
+        "kind": 2,
+        "importPath": "results.results",
+        "description": "results.results",
+        "peekOfCode": "def write_results_to_file(results, \n                          file_name='result', \n                          file_path='results/results_files'):\n    # Writing to a file\n    with open(f'{file_path}/{file_name}.pkl', 'wb') as file:\n        data_to_save = {'results': results}\n        pickle.dump(data_to_save, file)\n    print(f'Results are saved to {file_path}/{file_name}.pkl')\ndef read_results_from_file(file_name='result', \n                           file_path='results/results_files'):",
+        "detail": "results.results",
+        "documentation": {}
+    },
+    {
+        "label": "read_results_from_file",
+        "kind": 2,
+        "importPath": "results.results",
+        "description": "results.results",
+        "peekOfCode": "def read_results_from_file(file_name='result', \n                           file_path='results/results_files'):\n    # Reading from a file\n    with open(f'{file_path}/{file_name}.pkl', 'rb') as file:\n        loaded_data = pickle.load(file)\n    loaded_results = loaded_data['results']\n    print(f'Results are loaded from {file_path}/{file_name}.pkl')\n    return loaded_results",
+        "detail": "results.results",
+        "documentation": {}
+    },
+    {
         "label": "main",
         "kind": 2,
         "importPath": "unused.demo",
@@ -668,6 +842,51 @@
         "documentation": {}
     },
     {
+        "label": "RANDOM_SEED",
+        "kind": 5,
+        "importPath": "utils.CONSTANTS",
+        "description": "utils.CONSTANTS",
+        "peekOfCode": "RANDOM_SEED = 42\n# Plotting\nDISCRETE_CMAP = 'Paired'\nCONTINUOUS_CMAP = 'rainbow'\nCYCLIC_CMAP = 'hsv'\nBG_COLOR = 'floralwhite'",
+        "detail": "utils.CONSTANTS",
+        "documentation": {}
+    },
+    {
+        "label": "DISCRETE_CMAP",
+        "kind": 5,
+        "importPath": "utils.CONSTANTS",
+        "description": "utils.CONSTANTS",
+        "peekOfCode": "DISCRETE_CMAP = 'Paired'\nCONTINUOUS_CMAP = 'rainbow'\nCYCLIC_CMAP = 'hsv'\nBG_COLOR = 'floralwhite'",
+        "detail": "utils.CONSTANTS",
+        "documentation": {}
+    },
+    {
+        "label": "CONTINUOUS_CMAP",
+        "kind": 5,
+        "importPath": "utils.CONSTANTS",
+        "description": "utils.CONSTANTS",
+        "peekOfCode": "CONTINUOUS_CMAP = 'rainbow'\nCYCLIC_CMAP = 'hsv'\nBG_COLOR = 'floralwhite'",
+        "detail": "utils.CONSTANTS",
+        "documentation": {}
+    },
+    {
+        "label": "CYCLIC_CMAP",
+        "kind": 5,
+        "importPath": "utils.CONSTANTS",
+        "description": "utils.CONSTANTS",
+        "peekOfCode": "CYCLIC_CMAP = 'hsv'\nBG_COLOR = 'floralwhite'",
+        "detail": "utils.CONSTANTS",
+        "documentation": {}
+    },
+    {
+        "label": "BG_COLOR",
+        "kind": 5,
+        "importPath": "utils.CONSTANTS",
+        "description": "utils.CONSTANTS",
+        "peekOfCode": "BG_COLOR = 'floralwhite'",
+        "detail": "utils.CONSTANTS",
+        "documentation": {}
+    },
+    {
         "label": "data_prep",
         "kind": 2,
         "importPath": "utils.run_script",
@@ -677,30 +896,21 @@
         "documentation": {}
     },
     {
+        "label": "create_directory_if_not_exists",
+        "kind": 2,
+        "importPath": "utils.utils",
+        "description": "utils.utils",
+        "peekOfCode": "def create_directory_if_not_exists(directory):\n    if not os.path.exists(directory):\n        os.makedirs(directory)",
+        "detail": "utils.utils",
+        "documentation": {}
+    },
+    {
         "label": "plot_embeddings",
         "kind": 2,
         "importPath": "visualization.visualization",
         "description": "visualization.visualization",
-        "peekOfCode": "def plot_embeddings(embeddings,\n                    y,\n                    n_neighbors,\n                    #n_knn_neighbors,\n                    data_title,\n                    dot_size=100, \n                    alpha=0.5, \n                    fig_path='figures', \n                    fig_name='figure', \n                    cmap='Paired',",
+        "peekOfCode": "def plot_embeddings(embeddings,\n                    y,\n                    n_neighbors,\n                    data_title,\n                    dot_size=100, \n                    alpha=0.5, \n                    fig_path='figures', \n                    fig_name='figure', \n                    cmap=DISCRETE_CMAP,\n                    metric='KNN'):",
         "detail": "visualization.visualization",
-        "documentation": {}
-    },
-    {
-        "label": "RANDOM_SEED",
-        "kind": 5,
-        "importPath": "PARAMETERS",
-        "description": "PARAMETERS",
-        "peekOfCode": "RANDOM_SEED = 42",
-        "detail": "PARAMETERS",
-        "documentation": {}
-    },
-    {
-        "label": "get_dataset_by_name",
-        "kind": 2,
-        "importPath": "main",
-        "description": "main",
-        "peekOfCode": "def get_dataset_by_name(name='Digits'):\n    \"\"\"Loads the dataset of choice.\n    Args:\n        name (str, optional): Name of the dataset. Defaults to 'Digits'.\n    Returns:\n        (array, array): X (data/features) and y (target/labels)\n    \"\"\"\n    if name == 'Digits':\n        digits = datasets.load_digits()\n        X = digits.data",
-        "detail": "main",
         "documentation": {}
     },
     {
@@ -717,7 +927,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def hyperparameter_tuning(X, \n                          y, \n                          algorithm='UMAP', \n                          ns_neighbors=[5, 10, 20, 50, 100]):\n    print(f'\\nHyperparameter tuning for {algorithm}:\\n')\n    Xs_new = []\n    results = []\n    if algorithm == 'UMAP':\n        for n_neighbors in ns_neighbors:\n            print(f'Calculating results for {n_neighbors} neighbors')",
+        "peekOfCode": "def hyperparameter_tuning(X, \n                          y, \n                          algorithm='UMAP', \n                          ns_neighbors=[5, 10, 20, 50, 100]):\n    print(f'\\nHyperparameter tuning for {algorithm}:\\n')\n    Xs_new = []\n    metric_results = []\n    if algorithm == 'UMAP':\n        for n_neighbors in ns_neighbors:\n            print(f'Calculating results for {n_neighbors} neighbors')",
         "detail": "main",
         "documentation": {}
     },
@@ -726,7 +936,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def visualize_and_print_results(Xs_new_umap,\n                                Xs_new_pacmap,\n                                knn_neighbors_umap,\n                                knn_neighbors_pacmap,\n                                results_umap,\n                                results_pacmap,\n                                params_umap,\n                                params_pacmap,\n                                y,\n                                dataset_name):",
+        "peekOfCode": "def visualize_and_print_results(results_umap,\n                                results_pacmap,\n                                y,\n                                dataset_name,\n                                cmap,\n                                max_datapoints=10000):\n    # Print results of both algorithms\n    res.print_results(results_umap, results_pacmap)\n    metrics = ['knn', 'svm', 'cte', 'rte']\n    title_metrics = ['KNN', 'SVM', 'centroid triplet', 'random triplet']",
         "detail": "main",
         "documentation": {}
     },
@@ -735,7 +945,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def main(dataset_name, data_path='data', figure_path='figures'):\n    print('\\nInitializing UMAP and PaCMAP calculations\\n')\n    np.random.seed(RANDOM_SEED)  # Set random seed\n    X, y = get_dataset_by_name(dataset_name)  # Load data\n    # UMAP\n    Xs_new_umap, results_umap, params_umap, knn_neighbors_umap = hyperparameter_tuning(X, y, algorithm='UMAP')\n    X_new_umap = Xs_new_umap['knn']\n    # PaCMAP\n    Xs_new_pacmap, results_pacmap, params_pacmap, knn_neighbors_pacmap = hyperparameter_tuning(X, y, algorithm='PaCMAP')\n    visualize_and_print_results(Xs_new_umap,",
+        "peekOfCode": "def main(dataset_name, \n         data_path='data', \n         figure_path='figures', \n         read_results=False, \n         cmap=None):\n    X, y = get_dataset_by_name(dataset_name)  # Load data\n    if not read_results: \n        print('\\nInitializing UMAP and PaCMAP calculations ' \\\n        f'for {dataset_name} dataset\\n')       \n        # UMAP",
         "detail": "main",
         "documentation": {}
     },
@@ -744,7 +954,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "module_paths = ['algorithms', 'evaluation', 'visualization']  # './path' if main is in a folder\nsys.path[0:0] = module_paths\n# Import packages\nfrom sklearn import datasets\nfrom umap_reducer import UMAP_reducer\nfrom pacmap_reducer import PaCMAP_reducer\nimport evaluation\nimport visualization\nfrom PARAMETERS import RANDOM_SEED\ndef get_dataset_by_name(name='Digits'):",
+        "peekOfCode": "module_paths = ['algorithms', \n                'data', \n                'evaluation',\n                'results', \n                'utils',\n                'visualization']  # './path' if main is in a folder\nsys.path[0:0] = module_paths\n# Import packages and modules\nfrom umap_reducer import UMAP_reducer\nfrom pacmap_reducer import PaCMAP_reducer",
         "detail": "main",
         "documentation": {}
     },
@@ -753,7 +963,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "sys.path[0:0] = module_paths\n# Import packages\nfrom sklearn import datasets\nfrom umap_reducer import UMAP_reducer\nfrom pacmap_reducer import PaCMAP_reducer\nimport evaluation\nimport visualization\nfrom PARAMETERS import RANDOM_SEED\ndef get_dataset_by_name(name='Digits'):\n    \"\"\"Loads the dataset of choice.",
+        "peekOfCode": "sys.path[0:0] = module_paths\n# Import packages and modules\nfrom umap_reducer import UMAP_reducer\nfrom pacmap_reducer import PaCMAP_reducer\nimport evaluation\nimport visualization\nimport numpy as np\nfrom load_data import get_dataset_by_name\nimport results as res\nimport utils",
         "detail": "main",
         "documentation": {}
     }

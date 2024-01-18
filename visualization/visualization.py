@@ -4,6 +4,9 @@ import pandas as pd
 import seaborn as sns
 from matplotlib.colors import ListedColormap
 import matplotlib as mpl
+import sys
+sys.path.insert(0, './utils')
+from CONSTANTS import *
 
 plt.rc('text', usetex=True)
 
@@ -11,13 +14,12 @@ plt.rc('text', usetex=True)
 def plot_embeddings(embeddings,
                     y,
                     n_neighbors,
-                    #n_knn_neighbors,
                     data_title,
                     dot_size=100, 
                     alpha=0.5, 
                     fig_path='figures', 
                     fig_name='figure', 
-                    cmap='Paired',
+                    cmap=DISCRETE_CMAP,
                     metric='KNN'):
     """Creates and saves a 2D scatter plot of embeddings"""
     num_classes = len(np.unique(y))
@@ -31,7 +33,7 @@ def plot_embeddings(embeddings,
         cmap = ListedColormap(sns.color_palette(cmap))
 
     # Remove lines around plot
-    sns.despine(fig=None, ax=None, top=True, right=True, left=True, bottom=True, offset=None, trim=False)
+    sns.despine(left=True, bottom=True)
 
     for i in range(num_plots):
         ax = axs[0][i]
@@ -49,13 +51,15 @@ def plot_embeddings(embeddings,
 
         ax.set_box_aspect(1)
         ax.set_title(f'{method_name}', fontsize=24)
-        ax.set_facecolor('floralwhite')
+        ax.set_facecolor(BG_COLOR)
+        
+        # Turn off ticks
         ax.set_xticks([])
         ax.set_yticks([])
-        ax.set_xlabel(r'$n=' + str(n_neighbors[i]) 
-                      #+ r', n_{KNN}=' + str(n_knn_neighbors[i]) 
-                      + '$', fontsize=20)
+        
+        ax.set_xlabel(r'$n=' + str(n_neighbors[i]) + '$', fontsize=20)
     
     fig.tight_layout(pad=3)
     plt.savefig(f'{fig_path}/{fig_name}.png')
-    print(f'\nSuccessfully saved {metric} accuracy figure of {data_title} dataset')
+    print(f'\nSuccessfully saved {metric} accuracy figure ' \
+        f'of {data_title} dataset')

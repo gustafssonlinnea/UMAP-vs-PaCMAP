@@ -8,7 +8,9 @@ import numpy as np
 import pickle
 import numba
 
-from utils.run_script import data_prep
+import sys
+sys.path.insert(0, './utils')
+from run_script import data_prep
 from sklearn.svm import SVC, LinearSVC
 from sklearn.model_selection import StratifiedKFold, LeaveOneOut
 from sklearn.neighbors import KNeighborsClassifier, NearestNeighbors
@@ -24,9 +26,7 @@ import numpy as np
 import numba
 from sklearn.decomposition import TruncatedSVD
 
-from PARAMETERS import*
-
-np.random.seed(RANDOM_SEED)  # Set random seed
+from CONSTANTS import *
 
 
 @numba.njit()
@@ -319,7 +319,7 @@ def random_triplet_eval(X, X_new, y):
     # Sampling Triplets
     # Five triplet per point
     anchors = np.arange(X.shape[0])
-    rng = default_rng()
+    rng = default_rng(RANDOM_SEED)
     triplets = rng.choice(anchors, (X.shape[0], 5, 2))
     triplet_labels = np.zeros((X.shape[0], 5))
     anchors = anchors.reshape((-1, 1, 1))
