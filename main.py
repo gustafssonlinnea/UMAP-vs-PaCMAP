@@ -116,7 +116,7 @@ def visualize_and_print_results(results_umap,
                                 cmap,
                                 max_datapoints=10000):
     # Print results of both algorithms
-    res.print_results(results_umap, results_pacmap)
+    res.Results.print_results(results_umap, results_pacmap)
     
     metrics = ['knn', 'svm', 'cte', 'rte']
     title_metrics = ['KNN', 'SVM', 'centroid triplet', 'random triplet']
@@ -168,28 +168,22 @@ def main(dataset_name,
         f'for {dataset_name} dataset\n')       
 
         # UMAP
-        results_umap = hyperparameter_tuning(X, 
-                                             y, 
-                                             algorithm='UMAP')
-        res.write_results_to_file(results_umap, 
-                                  f'res_UMAP_{dataset_name}')
+        results_umap = hyperparameter_tuning(X, y, algorithm='UMAP')
+        results_umap.write_results_to_file(f'res_UMAP_{dataset_name}')
         
         # PaCMAP
-        results_pacmap = hyperparameter_tuning(X, 
-                                               y, 
-                                               algorithm='PaCMAP')
-        res.write_results_to_file(results_pacmap, 
-                                  f'res_PaCMAP_{dataset_name}')   
+        results_pacmap = hyperparameter_tuning(X, y, algorithm='PaCMAP')
+        results_pacmap.write_results_to_file(f'res_PaCMAP_{dataset_name}')
     else:
         print('Initializing reading of stored results ' \
             f'for {dataset_name} dataset\n')
 
         # UMAP
-        results_umap = res.read_results_from_file(
+        results_umap = res.Results.read_results_from_file(
             file_name=f'res_UMAP_{dataset_name}')
         
         # PaCMAP
-        results_pacmap = res.read_results_from_file(
+        results_pacmap = res.Results.read_results_from_file(
             file_name=f'res_PaCMAP_{dataset_name}')
     
     visualize_and_print_results(results_umap, 
@@ -211,6 +205,4 @@ if __name__ == '__main__':
     #main('CIFAR-100', read_results=True)
     #main('Spiral3D', read_results=True)
     main('Circle2D', read_results=True)
-    
-    pass
     

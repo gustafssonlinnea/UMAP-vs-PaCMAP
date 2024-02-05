@@ -792,34 +792,7 @@
         "kind": 6,
         "importPath": "results.results",
         "description": "results.results",
-        "peekOfCode": "class Results():\n    def __init__(self, Xs, metric_results, params, n_knn_neighbors):\n        self.Xs = Xs\n        self.metric_results = metric_results\n        self.params = params\n        self.n_knn_neighbors = n_knn_neighbors\ndef print_results(results_umap, results_pacmap):\n    table = [[results_umap.metric_results['knn'], \n                results_umap.params['knn'], \n                results_pacmap.metric_results['knn'], ",
-        "detail": "results.results",
-        "documentation": {}
-    },
-    {
-        "label": "print_results",
-        "kind": 2,
-        "importPath": "results.results",
-        "description": "results.results",
-        "peekOfCode": "def print_results(results_umap, results_pacmap):\n    table = [[results_umap.metric_results['knn'], \n                results_umap.params['knn'], \n                results_pacmap.metric_results['knn'], \n                results_pacmap.params['knn']],\n             [results_umap.metric_results['svm'],\n                results_umap.params['svm'],\n                results_pacmap.metric_results['svm'],\n                results_pacmap.params['svm']],\n             [results_umap.metric_results['cte'], ",
-        "detail": "results.results",
-        "documentation": {}
-    },
-    {
-        "label": "write_results_to_file",
-        "kind": 2,
-        "importPath": "results.results",
-        "description": "results.results",
-        "peekOfCode": "def write_results_to_file(results, \n                          file_name='result', \n                          file_path='results/results_files'):\n    # Writing to a file\n    with open(f'{file_path}/{file_name}.pkl', 'wb') as file:\n        data_to_save = {'results': results}\n        pickle.dump(data_to_save, file)\n    print(f'Results are saved to {file_path}/{file_name}.pkl')\ndef read_results_from_file(file_name='result', \n                           file_path='results/results_files'):",
-        "detail": "results.results",
-        "documentation": {}
-    },
-    {
-        "label": "read_results_from_file",
-        "kind": 2,
-        "importPath": "results.results",
-        "description": "results.results",
-        "peekOfCode": "def read_results_from_file(file_name='result', \n                           file_path='results/results_files'):\n    # Reading from a file\n    with open(f'{file_path}/{file_name}.pkl', 'rb') as file:\n        loaded_data = pickle.load(file)\n    loaded_results = loaded_data['results']\n    print(f'Results are loaded from {file_path}/{file_name}.pkl')\n    return loaded_results",
+        "peekOfCode": "class Results():\n    def __init__(self, Xs, metric_results, params, n_knn_neighbors):\n        self.Xs = Xs\n        self.metric_results = metric_results\n        self.params = params\n        self.n_knn_neighbors = n_knn_neighbors\n    def write_results_to_file(self,\n                              file_name='result',\n                              file_path='results/results_files'):\n        # Writing to a file",
         "detail": "results.results",
         "documentation": {}
     },
@@ -936,7 +909,7 @@
         "kind": 2,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "def visualize_and_print_results(results_umap,\n                                results_pacmap,\n                                y,\n                                dataset_name,\n                                cmap,\n                                max_datapoints=10000):\n    # Print results of both algorithms\n    res.print_results(results_umap, results_pacmap)\n    metrics = ['knn', 'svm', 'cte', 'rte']\n    title_metrics = ['KNN', 'SVM', 'centroid triplet', 'random triplet']",
+        "peekOfCode": "def visualize_and_print_results(results_umap,\n                                results_pacmap,\n                                y,\n                                dataset_name,\n                                cmap,\n                                max_datapoints=10000):\n    # Print results of both algorithms\n    res.Results.print_results(results_umap, results_pacmap)\n    metrics = ['knn', 'svm', 'cte', 'rte']\n    title_metrics = ['KNN', 'SVM', 'centroid triplet', 'random triplet']",
         "detail": "main",
         "documentation": {}
     },

@@ -81,19 +81,5 @@ def get_dataset_by_name(name='Digits'):
     elif name == 'Circle2D':  # 3 dimensions
         c = circle2D.Circle2D()
         X, y = c.load_data()
-        
-    """        
-    elif name == 'LFW':
-        lfw = datasets.fetch_lfw_people(min_faces_per_person=70, resize=0.4)
-        X, y = lfw.data, lfw.target
-        X = X.reshape(X.shape[0], -1)
-
-    elif name == 'COIL-20':
-        # loading preprocessed coil_20 dataset
-        # you can change it with any dataset that is in the ndarray format, with the shape (N, D)
-        # where N is the number of samples and D is the dimension of each sample
-        X = np.load('./data/coil_20.npy', allow_pickle=True)
-        X = X.reshape(X.shape[0], -1)
-        y = np.load('./data/coil_20_labels.npy', allow_pickle=True)"""
     
     return X, y
