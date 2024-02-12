@@ -1,4 +1,4 @@
-"""Most code from the official PaCMAP implementation (January 2024)"""
+"""Code from the official PaCMAP implementation (January 2024)"""
 
 import os
 import json
@@ -11,6 +11,7 @@ import numba
 import sys
 sys.path.insert(0, './utils')
 from run_script import data_prep
+
 from sklearn.svm import SVC, LinearSVC
 from sklearn.model_selection import StratifiedKFold, LeaveOneOut
 from sklearn.neighbors import KNeighborsClassifier, NearestNeighbors
@@ -21,9 +22,6 @@ from sklearn.kernel_approximation import Nystroem
 from sklearn.pipeline import make_pipeline
 from collections import Counter
 from numpy.random import default_rng
-
-import numpy as np
-import numba
 from sklearn.decomposition import TruncatedSVD
 
 from CONSTANTS import *
@@ -613,20 +611,3 @@ def evaluate_rtes(selected_file, dataset_name='MNIST', labelled=True, data_pca=T
             pickle.dump(all_results, fp, protocol=pickle.HIGHEST_PROTOCOL)
         print('Succesfully evaluated ' + file)
     print('Finished evaluation')
-
-def print_evaluation_results(results):
-    """Prints the results of results['name']
-    results['knn'] is a series of accuracies for the given n_neighbors
-    (defaults to n_neighbors_list=[1, 3, 5, 10, 15, 20, 25, 30])
-
-    Args:
-        results (_type_): _description_
-    """
-    print(f"\nThe results of {results['name']}:")
-    if results['knn'] is list:
-        print(f"KNN accuracies (for different n_neighbors):\t{results['knn']}")
-    else:
-        print(f"KNN accuracy:\t{results['knn']}")
-    print(f"SVM accuracy:\t{results['svm']}")
-    print(f"Centroid triplet accuracy:\t{results['cte']}")
-    print(f"Random triplet accuracy:\t{results['rte']}\n")

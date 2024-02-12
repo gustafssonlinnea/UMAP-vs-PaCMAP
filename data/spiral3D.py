@@ -1,11 +1,9 @@
-from mpl_toolkits import mplot3d
 import numpy as np
 import matplotlib.pyplot as plt
 
 import sys
 sys.path.insert(0, './utils')
 from CONSTANTS import *
-#from utils import create_directory_if_not_exists
 import utils
 
 class Spiral3D:
