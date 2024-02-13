@@ -52,3 +52,6 @@ This project relies on the work of the above mentioned papers. The code for UMAP
 
 ## Authors
 [Linnéa Gustafsson](https://github.com/gustafssonlinnea)
+
+## License
+According to the used packages.
