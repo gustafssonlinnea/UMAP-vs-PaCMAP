@@ -222,14 +222,6 @@
         "documentation": {}
     },
     {
-        "label": "SVC",
-        "importPath": "sklearn.svm",
-        "description": "sklearn.svm",
-        "isExtraImport": true,
-        "detail": "sklearn.svm",
-        "documentation": {}
-    },
-    {
         "label": "StratifiedKFold",
         "importPath": "sklearn.model_selection",
         "description": "sklearn.model_selection",
@@ -239,30 +231,6 @@
     },
     {
         "label": "LeaveOneOut",
-        "importPath": "sklearn.model_selection",
-        "description": "sklearn.model_selection",
-        "isExtraImport": true,
-        "detail": "sklearn.model_selection",
-        "documentation": {}
-    },
-    {
-        "label": "LeaveOneOut",
-        "importPath": "sklearn.model_selection",
-        "description": "sklearn.model_selection",
-        "isExtraImport": true,
-        "detail": "sklearn.model_selection",
-        "documentation": {}
-    },
-    {
-        "label": "StratifiedKFold",
-        "importPath": "sklearn.model_selection",
-        "description": "sklearn.model_selection",
-        "isExtraImport": true,
-        "detail": "sklearn.model_selection",
-        "documentation": {}
-    },
-    {
-        "label": "train_test_split",
         "importPath": "sklearn.model_selection",
         "description": "sklearn.model_selection",
         "isExtraImport": true,
@@ -279,14 +247,6 @@
     },
     {
         "label": "NearestNeighbors",
-        "importPath": "sklearn.neighbors",
-        "description": "sklearn.neighbors",
-        "isExtraImport": true,
-        "detail": "sklearn.neighbors",
-        "documentation": {}
-    },
-    {
-        "label": "KNeighborsClassifier",
         "importPath": "sklearn.neighbors",
         "description": "sklearn.neighbors",
         "isExtraImport": true,
@@ -334,14 +294,6 @@
         "documentation": {}
     },
     {
-        "label": "Nystroem",
-        "importPath": "sklearn.kernel_approximation",
-        "description": "sklearn.kernel_approximation",
-        "isExtraImport": true,
-        "detail": "sklearn.kernel_approximation",
-        "documentation": {}
-    },
-    {
         "label": "make_pipeline",
         "importPath": "sklearn.pipeline",
         "description": "sklearn.pipeline",
@@ -375,64 +327,6 @@
         "documentation": {}
     },
     {
-        "label": "load_digits",
-        "importPath": "sklearn.datasets",
-        "description": "sklearn.datasets",
-        "isExtraImport": true,
-        "detail": "sklearn.datasets",
-        "documentation": {}
-    },
-    {
-        "label": "umap",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "umap",
-        "description": "umap",
-        "detail": "umap",
-        "documentation": {}
-    },
-    {
-        "label": "accuracy_score",
-        "importPath": "sklearn.metrics",
-        "description": "sklearn.metrics",
-        "isExtraImport": true,
-        "detail": "sklearn.metrics",
-        "documentation": {}
-    },
-    {
-        "label": "pdist",
-        "importPath": "scipy.spatial.distance",
-        "description": "scipy.spatial.distance",
-        "isExtraImport": true,
-        "detail": "scipy.spatial.distance",
-        "documentation": {}
-    },
-    {
-        "label": "tabulate",
-        "importPath": "tabulate",
-        "description": "tabulate",
-        "isExtraImport": true,
-        "detail": "tabulate",
-        "documentation": {}
-    },
-    {
-        "label": "evaluation",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "evaluation",
-        "description": "evaluation",
-        "detail": "evaluation",
-        "documentation": {}
-    },
-    {
-        "label": "calculate_svm_accuracy",
-        "importPath": "evaluation",
-        "description": "evaluation",
-        "isExtraImport": true,
-        "detail": "evaluation",
-        "documentation": {}
-    },
-    {
         "label": "ListedColormap",
         "importPath": "matplotlib.colors",
         "description": "matplotlib.colors",
@@ -463,6 +357,15 @@
         "description": "pacmap_reducer",
         "isExtraImport": true,
         "detail": "pacmap_reducer",
+        "documentation": {}
+    },
+    {
+        "label": "evaluation",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "evaluation",
+        "description": "evaluation",
+        "detail": "evaluation",
         "documentation": {}
     },
     {
@@ -516,24 +419,6 @@
         "description": "data.circle2D",
         "peekOfCode": "class Circle2D:\n    def __init__(self, circle_factor=30, n_points=100):\n        self.theta = np.linspace(0, 2 * np.pi, n_points)\n        self.x = circle_factor * np.cos(self.theta)\n        self.y = circle_factor * np.sin(self.theta)\n        c = np.linspace(0, 1, n_points)\n        bin_edges = np.linspace(0, 1, n_points // 5)\n        self.c = np.digitize(c, bin_edges, right=True)\n    def plot_circle(self, fig_path='figures', fig_name='fig_Circle2D'):\n        plt.figure()",
         "detail": "data.circle2D",
-        "documentation": {}
-    },
-    {
-        "label": "ColoredCircles",
-        "kind": 6,
-        "importPath": "data.colored_circles",
-        "description": "data.colored_circles",
-        "peekOfCode": "class ColoredCircles:\n    def __init__(self, points_per_class=50, image_size=100, data_path='data/colored_circles'):\n        self.num_classes = 4\n        self.points_per_class = points_per_class\n        self.image_size = image_size\n        self.dpi = plt.rcParams['figure.dpi']  # pixel in inches\n        # Create a list to store the image data\n        self.image_data = []\n        self.data_path = data_path\n        utils.create_directory_if_not_exists(data_path)",
-        "detail": "data.colored_circles",
-        "documentation": {}
-    },
-    {
-        "label": "cc",
-        "kind": 5,
-        "importPath": "data.colored_circles",
-        "description": "data.colored_circles",
-        "peekOfCode": "cc = ColoredCircles()\nX, y = cc.get_dataset()",
-        "detail": "data.colored_circles",
         "documentation": {}
     },
     {
@@ -777,24 +662,6 @@
         "description": "results.results",
         "peekOfCode": "class Results():\n    def __init__(self, Xs, metric_results, params, n_knn_neighbors):\n        self.Xs = Xs\n        self.metric_results = metric_results\n        self.params = params\n        self.n_knn_neighbors = n_knn_neighbors\n    def write_results_to_file(self,\n                              file_name='result',\n                              file_path='results/results_files'):\n        # Writing to a file",
         "detail": "results.results",
-        "documentation": {}
-    },
-    {
-        "label": "main",
-        "kind": 2,
-        "importPath": "unused.demo",
-        "description": "unused.demo",
-        "peekOfCode": "def main():\n    sns.set(style='white', context='notebook', rc={'figure.figsize':(14,10)})\n    digits = load_digits()\n    # print(digits.DESCR)\n    \"\"\"fig, ax_array = plt.subplots(20, 20)\n    axes = ax_array.flatten()\n    for i, ax in enumerate(axes):\n        ax.imshow(digits.images[i], cmap='gray_r')\n    plt.setp(axes, xticks=[], yticks=[], frame_on=False)\n    plt.tight_layout(h_pad=0.5, w_pad=0.01)",
-        "detail": "unused.demo",
-        "documentation": {}
-    },
-    {
-        "label": "evaluate",
-        "kind": 2,
-        "importPath": "unused.evaluation_old",
-        "description": "unused.evaluation_old",
-        "peekOfCode": "def evaluate(embedding, labels):\n    knn_accuracy = _calculate_knn_accuracy(embedding, labels)\n    svm_accuracy, svm_accuracy_std = _calculate_svm_accuracy(embedding, labels)\n    random_triplet_accuracy = _calculate_random_triplet_accuracy(embedding)\n    centroid_triplet_accuracy = _calculate_centroid_triplet_accuracy(embedding, labels)\n    results = [\n        ['KNN Accuracy', knn_accuracy], \n        ['SVM Accuracy', svm_accuracy], \n        ['Random Triplet Accuracy', random_triplet_accuracy], \n        ['Centroid Triplet Accuracy', centroid_triplet_accuracy]",
-        "detail": "unused.evaluation_old",
         "documentation": {}
     },
     {
