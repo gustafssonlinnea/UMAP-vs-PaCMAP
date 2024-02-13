@@ -29,7 +29,7 @@ Required packages:
 - sklearn
 - sys
 - tensorflow.keras
-- umap
+- umap-learn
 
 Not all methods in `evaluation.py` are used in this implementation (only `evaluate_output()` and the methods called by it). Feel free to comment out unreached code if you don't want to use it. 
 
