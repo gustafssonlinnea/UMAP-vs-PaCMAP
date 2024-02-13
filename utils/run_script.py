@@ -1,3 +1,5 @@
+"""Code from the official PaCMAP implementation (January 2024)"""
+
 import numpy as np
 
 
