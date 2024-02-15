@@ -10,6 +10,8 @@ This project answers the research question:
 
 The work is heavily inspired by [*Understanding How Dimension Reduction Tools Work: An Empirical Approach to Deciphering t-SNE, UMAP, TriMap, and PaCMAP for Data Visualization* (Wang, Yingfan, et al., 2021)](https://dl.acm.org/doi/abs/10.5555/3546258.3546459), the paper introducing PaCMAP. It is also based on the work that launched UMAP, [*UMAP: Uniform Manifold Approximation and Projection for Dimension Reduction (McInnes, L., Healy, J., & Melville, J., 2018)*](https://arxiv.org/abs/1802.03426).
 
+See a presentation of the project in the [`presentation_slides`](./presentation_slides) folder.
+
 ## How to run
 The code is run from `main.py`.
 
